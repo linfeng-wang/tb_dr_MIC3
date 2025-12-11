@@ -1,7 +1,5 @@
 # input data
-data
 *.fasta
-*.npy
 *.csv
 *.bam
 *.cram
@@ -48,11 +46,14 @@ Julian/test
 *.fa.bwt.2bit.64
 *.fa.pac
 *.pack
-*.pt
-*.pth
-*.npy
 individual_models/snps_cryptic50kpos_emb.txt
 *.txt
+individual_models/cache/
+
+all_sample_snps_50k_*.npy
+cache/
+all_sample_snps_cryptic_*.npy
+all_sample_drs_50k_*.npy
 # *.yaml
 # find . -type f -size +99M
 # find . -type f -size +99M | awk -F. '{if (NF>1) print $NF}' | sort | uniq
