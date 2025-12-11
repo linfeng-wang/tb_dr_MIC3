@@ -38,24 +38,24 @@ All preprocessing steps needed to produce SNP × isolate matrices are included.
 ## Repository Structure
 
 tb_dr_MIC3/
-├── CRyPTIC_reuse_table_20231208.csv
-├── CRyPTIC_reuse_table_20231208_cleaned+tbprofiler.csv
-├── environment.yml
-├── README.md
+├── CRyPTIC_reuse_table_20231208.csv          # Original input data table containing MIC and metadata.
+├── CRyPTIC_reuse_table_20231208_cleaned+tbprofiler.csv # Cleaned and merged dataset, including TBProfiler results.
+├── environment.yml                           # Conda environment file listing all required dependencies.
+├── README.md                                 # This file.
 │
 ├── individual_models/
-│ ├── all_snp_.npy # SNP matrices per drug
-│ ├── generated_data30072025/ # processed SNP/MIC datasets
-│ ├── saved_models/ # trained CNN + XGB models
-│ ├── targets_pred/ # MIC predictions
-│ ├── plots/ # evaluation plots
-│ ├── nn_{drug}_class_resFeed.ipynb # CNN model training notebooks
-│ ├── xgb_.ipynb # XGBoost training notebooks
-│ └── shap/ and ablative analysis files
+│   ├── all_snp_.npy                          # Numpy matrices containing SNP information (one file per drug).
+│   ├── generated_data30072025/               # Directory containing processed SNP/MIC datasets ready for model training.
+│   ├── saved_models/                         # Directory for trained model weights (CNN and XGBoost).
+│   ├── targets_pred/                         # Directory containing prediction outputs (MIC predictions) for all models.
+│   ├── plots/                                # Directory for evaluation plots and visualisations.
+│   ├── nn_{drug}_class_resFeed.ipynb         # Jupyter notebooks for training the CNN classification models.
+│   ├── xgb_.ipynb                            # Jupyter notebooks for training the XGBoost models.
+│   └── shap/                                 # Contains SHAP and ablative analysis files for model interpretability.
 │
-├── data_gen_new.ipynb # SNP + MIC preprocessing pipeline
-├── data_size_checks.ipynb # dataset dimensionality/QC
-└── sankey.ipynb # MIC distribution visualisation
+├── data_gen_new.ipynb                        # Primary preprocessing pipeline (SNP + MIC data preparation).
+├── data_size_checks.ipynb                    # Notebook for dataset dimensionality checks and quality control (QC).
+└── sankey.ipynb                              # Notebook used for visualising MIC distribution via a Sankey diagram.
 
 ---
 
