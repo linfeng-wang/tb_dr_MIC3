@@ -6,7 +6,7 @@
 ## Overview
 
 This repository contains the complete machine learning workflow for predicting multi-level minimum inhibitory concentrations (MICs) for *Mycobacterium tuberculosis* (MTB) from whole-genome variation.  
-The project aims to advance beyond binary resistance classification toward **quantitative MIC multi-classification prediction**, integrating:
+The project aims to advance beyond binary resistance classification toward **multi-class MIC prediction**, integrating:
 
 - curated genomic preprocessing  
 - multi-class XGBoost models  
@@ -37,27 +37,7 @@ All preprocessing steps needed to produce SNP × isolate matrices are included.
 
 ## Repository Structure
 
-tb_dr_MIC3/
-- CRyPTIC_reuse_table_20231208.csv
-├── CRyPTIC_reuse_table_20231208_cleaned+tbprofiler.csv
-├── environment.yml
-├── README.md
-│
-├── individual_models/
-│ ├── all_snp_.npy # SNP matrices per drug
-│ ├── generated_data30072025/ # processed SNP/MIC datasets
-│ ├── saved_models/ # trained CNN + XGB models
-│ ├── targets_pred/ # MIC predictions
-│ ├── plots/ # evaluation plots
-│ ├── nn_{drug}_class_resFeed.ipynb # CNN model training notebooks
-│ ├── xgb_.ipynb # XGBoost training notebooks
-│ └── shap/ and ablative analysis files
-│
-├── data_gen_new.ipynb # SNP + MIC preprocessing pipeline
-├── data_size_checks.ipynb # dataset dimensionality/QC
-└── sankey.ipynb # MIC distribution visualisation
-
-tb_dr_MIC3/
+**tb_dr_MIC3/**
 - CRyPTIC_reuse_table_20231208.csv          # Original input data table containing MIC and metadata.
 - CRyPTIC_reuse_table_20231208_cleaned+tbprofiler.csv # Cleaned and merged dataset, including TBProfiler results.
 - environment.yml                           # Conda environment file listing all required dependencies.
