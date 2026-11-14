@@ -1,5 +1,8 @@
 # Revision analyses
 
+> These analyses were run on the originally submitted models. The results of the revised manuscript come from the
+> corrected pipeline in `corrected_pipeline/`, which supersedes them.
+
 Additional analyses run in response to reviewer comments (revision 6). They reuse the trained models in
 `individual_models/saved_models/` and the per-drug data, train/test split and oversampling exactly as defined in the
 `individual_models/nn_<drug>_class_resFeed.ipynb` notebooks (`mic_common.py` executes the data and oversampling cells

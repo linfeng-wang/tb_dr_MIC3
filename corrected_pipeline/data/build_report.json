@@ -1,0 +1,168 @@
+{
+ "INH": {
+  "n": 11736,
+  "n_old": 11736,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 806,
+  "genes": {
+   "inhA": 96,
+   "katG": 528,
+   "kasA": 67,
+   "ahpC": 83,
+   "fabG1": 32
+  },
+  "isolates_without_variant": 2122,
+  "n_R": 5647
+ },
+ "ETH": {
+  "n": 11800,
+  "n_old": 11800,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 784,
+  "genes": {
+   "ethA": 688,
+   "inhA": 96
+  },
+  "isolates_without_variant": 8433,
+  "n_R": 1599
+ },
+ "EMB": {
+  "n": 11823,
+  "n_old": 11823,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 867,
+  "genes": {
+   "embA": 311,
+   "embB": 335,
+   "embC": 221
+  },
+  "isolates_without_variant": 96,
+  "n_R": 2123
+ },
+ "RIF": {
+  "n": 11769,
+  "n_old": 11769,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 865,
+  "genes": {
+   "rpoA": 129,
+   "rpoB": 406,
+   "rpoC": 330
+  },
+  "isolates_without_variant": 2060,
+  "n_R": 4452
+ },
+ "LEV": {
+  "n": 11829,
+  "n_old": 11829,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 563,
+  "genes": {
+   "gyrA": 330,
+   "gyrB": 233
+  },
+  "isolates_without_variant": 8,
+  "n_R": 1986
+ },
+ "MXF": {
+  "n": 11860,
+  "n_old": 11860,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 560,
+  "genes": {
+   "gyrA": 327,
+   "gyrB": 233
+  },
+  "isolates_without_variant": 8,
+  "n_R": 1587
+ },
+ "KAN": {
+  "n": 11797,
+  "n_old": 11797,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 361,
+  "genes": {
+   "rrs": 222,
+   "eis": 139
+  },
+  "isolates_without_variant": 0,
+  "n_R": 1051
+ },
+ "AMI": {
+  "n": 11738,
+  "n_old": 11738,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": false,
+  "n_features": 362,
+  "genes": {
+   "rrs": 223,
+   "eis": 139
+  },
+  "isolates_without_variant": 0,
+  "n_R": 839
+ },
+ "BDQ": {
+  "n": 11743,
+  "n_old": 11743,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 233,
+  "genes": {
+   "mmpR5": 136,
+   "atpE": 22,
+   "pepQ": 75
+  },
+  "isolates_without_variant": 10925,
+  "n_R": 101
+ },
+ "CFZ": {
+  "n": 11718,
+  "n_old": 11718,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 212,
+  "genes": {
+   "mmpR5": 137,
+   "pepQ": 75
+  },
+  "isolates_without_variant": 11028,
+  "n_R": 523
+ },
+ "DLM": {
+  "n": 11594,
+  "n_old": 11594,
+  "class_counts_equal": false,
+  "class_x_tbp_equal": false,
+  "n_features": 600,
+  "genes": {
+   "fgd1": 75,
+   "fbiA": 134,
+   "fbiB": 116,
+   "fbiC": 152,
+   "fbiD": 62,
+   "ddn": 61
+  },
+  "isolates_without_variant": 8521,
+  "n_R": 183
+ },
+ "LZD": {
+  "n": 11854,
+  "n_old": 11854,
+  "class_counts_equal": true,
+  "class_x_tbp_equal": true,
+  "n_features": 357,
+  "genes": {
+   "rrl": 315,
+   "rplC": 42
+  },
+  "isolates_without_variant": 10179,
+  "n_R": 153
+ }
+}
