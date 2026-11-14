@@ -1,0 +1,53 @@
+{
+ "drug": "EMB",
+ "kind": "cnn_std",
+ "n_train_orig": 9457,
+ "n_train_os": 19145,
+ "n_val": 1183,
+ "n_test": 1183,
+ "counts": {
+  "2": 3174,
+  "3": 2365,
+  "4": 1195,
+  "5": 1092,
+  "1": 893,
+  "6": 605,
+  "0": 133
+ },
+ "target": {
+  "2": 3174,
+  "3": 3165,
+  "4": 2972,
+  "5": 2870,
+  "1": 2671,
+  "6": 2383,
+  "0": 1910
+ },
+ "n_features": 867,
+ "best_params": {
+  "lr": 0.00021136554655315937,
+  "weight_decay": 8.055911363913384e-06,
+  "conv_dropout_rate": 0.3804773572225096,
+  "dense_dropout_rate": 0.15926598174194095,
+  "num_filters": 61,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 170,
+  "num_dense_layers": 2
+ },
+ "optuna_secs": 6724,
+ "seeds": {
+  "42": {
+   "val_loss": 0.1857577716256236,
+   "best_epoch": 12
+  },
+  "43": {
+   "val_loss": 0.18947430583549976,
+   "best_epoch": 20
+  },
+  "44": {
+   "val_loss": 0.1858270916385562,
+   "best_epoch": 14
+  }
+ },
+ "secs": 8079
+}

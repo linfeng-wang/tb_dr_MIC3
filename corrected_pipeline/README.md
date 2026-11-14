@@ -34,11 +34,14 @@ unchanged.
 | `r09_extra_tables.py` | `tables/s13_sensitivity.csv`, `s14_hyperparameters.csv` | Supplementary Tables 13, 14 |
 | `r10_supp_fig1.py` | `figs/supp_fig1_mic_distribution.png` | Supplementary Figure 1 |
 | `r11_lineage_markers.py` | `tables/s5_carrier_lineages_RIF.csv` | lineage distribution of the top-ranked rifampicin features |
-| `r12_facts.py` | printed | numbers quoted in the text |
+| `r12_facts.py`, `r13_facts_extra.py` | printed | numbers quoted in the text |
 
 Order: `r01`, then `r02 <drug> xgb` for each drug, `run_cnn.sh` (all CNNs), `run_all_sens.sh` (sensitivity runs),
 `r05`, `r06`, and `finalize.sh` for the tables and figures. `r01` needs the variant table (`cache/variants_full.csv`)
 and the CRyPTIC tables, which are not stored in the repository; the resulting inputs are provided in `data/`.
+
+`models/` holds the XGBoost models and, for each drug and CNN type, the CNN of the first training run (seed 42); the
+CNNs of the other two runs are not stored because of their size, but their test-set predictions are in `results/`.
 
 `results/` holds the test-set predictions (class probabilities) of every model and seed, from which all tables can
 be recomputed with `r03`, `r09` and `r12` without retraining. CNN training is not deterministic on GPU, so retrained

@@ -1,0 +1,53 @@
+{
+ "drug": "CFZ",
+ "kind": "cnn_std",
+ "n_train_orig": 9374,
+ "n_train_os": 31598,
+ "n_val": 1172,
+ "n_test": 1172,
+ "counts": {
+  "0": 5859,
+  "1": 2144,
+  "2": 954,
+  "3": 269,
+  "4": 100,
+  "5": 29,
+  "6": 19
+ },
+ "target": {
+  "0": 5859,
+  "1": 5700,
+  "2": 5399,
+  "3": 3825,
+  "4": 3656,
+  "5": 3585,
+  "6": 3574
+ },
+ "n_features": 212,
+ "best_params": {
+  "lr": 2.5973392815253836e-05,
+  "weight_decay": 1.0141908957464597e-05,
+  "conv_dropout_rate": 0.3462111210580843,
+  "dense_dropout_rate": 0.13147253254696475,
+  "num_filters": 109,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 97,
+  "num_dense_layers": 2
+ },
+ "optuna_secs": 3372,
+ "seeds": {
+  "42": {
+   "val_loss": 0.194408116995678,
+   "best_epoch": 2
+  },
+  "43": {
+   "val_loss": 0.20014182994390103,
+   "best_epoch": 2
+  },
+  "44": {
+   "val_loss": 0.20592277031709716,
+   "best_epoch": 1
+  }
+ },
+ "secs": 3611
+}

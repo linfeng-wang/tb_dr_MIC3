@@ -1,0 +1,53 @@
+{
+ "drug": "ETH",
+ "kind": "cnn_std",
+ "n_train_orig": 9440,
+ "n_train_os": 14774,
+ "n_val": 1180,
+ "n_test": 1180,
+ "counts": {
+  "2": 3512,
+  "3": 2256,
+  "1": 1456,
+  "4": 728,
+  "6": 713,
+  "5": 566,
+  "0": 209
+ },
+ "target": {
+  "2": 3512,
+  "3": 3145,
+  "1": 2345,
+  "4": 1617,
+  "6": 1602,
+  "5": 1455,
+  "0": 1098
+ },
+ "n_features": 784,
+ "best_params": {
+  "lr": 2.1657190949622768e-05,
+  "weight_decay": 1.608230895645543e-05,
+  "conv_dropout_rate": 0.14957036010821512,
+  "dense_dropout_rate": 0.11284258372923549,
+  "num_filters": 128,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 164,
+  "num_dense_layers": 1
+ },
+ "optuna_secs": 5963,
+ "seeds": {
+  "42": {
+   "val_loss": 0.1777006737256454,
+   "best_epoch": 6
+  },
+  "43": {
+   "val_loss": 0.18065566703424615,
+   "best_epoch": 13
+  },
+  "44": {
+   "val_loss": 0.1786967724056567,
+   "best_epoch": 12
+  }
+ },
+ "secs": 7883
+}

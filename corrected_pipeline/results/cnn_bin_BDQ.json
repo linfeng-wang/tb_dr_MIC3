@@ -1,0 +1,55 @@
+{
+ "drug": "BDQ",
+ "kind": "cnn_bin",
+ "n_train_orig": 9393,
+ "n_train_os": 19288,
+ "n_val": 1175,
+ "n_test": 1175,
+ "counts": {
+  "1": 3224,
+  "2": 3009,
+  "0": 2258,
+  "3": 627,
+  "4": 194,
+  "5": 51,
+  "6": 19,
+  "7": 11
+ },
+ "target": {
+  "1": 3224,
+  "2": 3010,
+  "0": 3005,
+  "3": 2404,
+  "4": 2238,
+  "5": 2273,
+  "6": 1797,
+  "7": 1337
+ },
+ "n_features": 233,
+ "best_params": {
+  "lr": 0.0009975439861259253,
+  "weight_decay": 7.540447103245188e-06,
+  "conv_dropout_rate": 0.3059495771579071,
+  "dense_dropout_rate": 0.1345392358506015,
+  "num_filters": 100,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 256,
+  "num_dense_layers": 2
+ },
+ "optuna_secs": 3692,
+ "seeds": {
+  "42": {
+   "val_loss": 0.13936020640616723,
+   "best_epoch": 7
+  },
+  "43": {
+   "val_loss": 0.139985360401742,
+   "best_epoch": 13
+  },
+  "44": {
+   "val_loss": 0.14016486458321836,
+   "best_epoch": 4
+  }
+ },
+ "secs": 4350
+}

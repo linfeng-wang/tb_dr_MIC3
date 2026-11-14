@@ -1,0 +1,53 @@
+{
+ "drug": "DLM",
+ "kind": "cnn_bin",
+ "n_train_orig": 9274,
+ "n_train_os": 36234,
+ "n_val": 1160,
+ "n_test": 1160,
+ "counts": {
+  "0": 7365,
+  "1": 1070,
+  "2": 506,
+  "3": 186,
+  "6": 72,
+  "4": 43,
+  "5": 32
+ },
+ "target": {
+  "0": 7365,
+  "1": 4894,
+  "2": 7365,
+  "3": 4903,
+  "6": 3942,
+  "4": 3892,
+  "5": 3873
+ },
+ "n_features": 600,
+ "best_params": {
+  "lr": 0.0007832921114568409,
+  "weight_decay": 1.0253623897736096e-06,
+  "conv_dropout_rate": 0.595442498004112,
+  "dense_dropout_rate": 0.013748920215166998,
+  "num_filters": 126,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 254,
+  "num_dense_layers": 3
+ },
+ "optuna_secs": 12280,
+ "seeds": {
+  "42": {
+   "val_loss": 0.1289023717929577,
+   "best_epoch": 6
+  },
+  "43": {
+   "val_loss": 0.13288033656005202,
+   "best_epoch": 12
+  },
+  "44": {
+   "val_loss": 0.12638424038887025,
+   "best_epoch": 11
+  }
+ },
+ "secs": 15735
+}

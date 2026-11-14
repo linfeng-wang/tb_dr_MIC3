@@ -1,0 +1,55 @@
+{
+ "drug": "RIF",
+ "kind": "cnn_bin",
+ "n_train_orig": 9415,
+ "n_train_os": 19192,
+ "n_val": 1177,
+ "n_test": 1177,
+ "counts": {
+  "0": 3462,
+  "7": 3222,
+  "1": 1669,
+  "2": 573,
+  "3": 149,
+  "6": 129,
+  "5": 119,
+  "4": 92
+ },
+ "target": {
+  "0": 3462,
+  "7": 3222,
+  "1": 2558,
+  "2": 2351,
+  "3": 1926,
+  "6": 1907,
+  "5": 1897,
+  "4": 1869
+ },
+ "n_features": 865,
+ "best_params": {
+  "lr": 0.0002604134223708207,
+  "weight_decay": 0.00033954096042345446,
+  "conv_dropout_rate": 0.33893654762907915,
+  "dense_dropout_rate": 0.1464264022803522,
+  "num_filters": 70,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 146,
+  "num_dense_layers": 3
+ },
+ "optuna_secs": 8329,
+ "seeds": {
+  "42": {
+   "val_loss": 0.1013785129319639,
+   "best_epoch": 20
+  },
+  "43": {
+   "val_loss": 0.10166685221781646,
+   "best_epoch": 21
+  },
+  "44": {
+   "val_loss": 0.10266228950722499,
+   "best_epoch": 20
+  }
+ },
+ "secs": 10185
+}

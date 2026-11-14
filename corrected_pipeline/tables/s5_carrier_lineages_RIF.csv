@@ -1,0 +1,22 @@
+feature,carriers,pct_R,pct_with_S450L,top_lineage,pct_carriers_in_top,pct_of_top_lineage_carrying,by_lineage
+rpoB p.Ser450Leu,2912,96.4,100.0,lineage2,52.6,37.2,lineage2:1533; lineage4:1022; lineage3:272; lineage1:66; mixed:16; nan:3
+rpoC c.-339T>C,5870,45.1,32.0,lineage2,70.2,99.9,lineage2:4122; lineage3:1009; lineage1:638; mixed:76; La1:13; lineage6:6; nan:3; La3:2; La2:1
+rpoB p.Asp435Val,535,95.0,0.0,lineage4,55.7,5.2,lineage4:298; lineage2:193; lineage3:39; lineage1:3; mixed:1; nan:1
+rpoC p.Glu1092Asp,330,63.9,59.4,lineage2,99.4,8.0,lineage2:328; mixed:2
+rpoC p.Gly594Glu,1784,21.4,12.8,lineage4,98.7,30.6,lineage4:1760; mixed:13; nan:11
+rpoB p.His445Asp,124,96.8,0.0,lineage4,56.5,1.2,lineage4:70; lineage2:34; lineage3:16; lineage1:3; mixed:1
+rpoB p.His445Tyr,153,97.4,0.0,lineage4,43.8,1.2,lineage4:67; lineage2:67; lineage3:10; lineage1:9
+rpoC p.Val483Ala,217,96.8,98.2,lineage2,70.5,3.7,lineage2:153; lineage4:39; lineage3:21; mixed:3; lineage1:1
+rpoC c.-936T>G,1022,46.5,26.8,lineage3,98.7,100.0,lineage3:1009; mixed:13
+rpoB p.Val695Leu,105,40.0,29.5,lineage4,100.0,1.8,lineage4:105
+rpoC p.Ala172Val,651,18.4,10.3,lineage1,98.0,100.0,lineage1:638; mixed:11; nan:1; lineage2:1
+rpoC p.Pro601Leu,445,13.0,5.8,lineage1,98.2,68.5,lineage1:437; mixed:8
+rpoC p.Val483Gly,206,98.5,97.1,lineage2,54.4,2.7,lineage2:112; lineage4:54; lineage3:34; lineage1:5; mixed:1
+rpoB p.Leu452Pro,130,63.8,0.0,lineage4,48.5,1.1,lineage4:63; lineage2:45; lineage3:16; lineage1:4; mixed:2
+rpoB p.Ser450Trp,59,94.9,0.0,lineage4,42.4,0.4,lineage4:25; lineage2:16; lineage3:12; lineage1:6
+rpoB p.Asp435Tyr,138,81.9,0.7,lineage4,43.5,1.0,lineage4:60; lineage2:41; lineage3:36; lineage1:1
+rpoA c.-68C>T,268,13.8,7.8,lineage4,98.9,4.6,lineage4:265; mixed:3
+rpoB c.-61C>T,981,47.2,27.2,lineage3,99.1,96.3,lineage3:972; mixed:8; nan:1
+rpoB p.Ile491Phe,57,68.4,0.0,lineage4,77.2,0.8,lineage4:44; lineage2:6; lineage1:4; lineage3:3
+rpoB p.Leu430Pro,124,37.1,0.0,lineage2,50.8,1.5,lineage2:63; lineage4:34; lineage3:16; lineage1:10; mixed:1
+rpoB c.-61C>T,981,47.2,27.2,lineage3,99.1,96.3,lineage3:972; mixed:8; nan:1

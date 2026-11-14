@@ -14,4 +14,5 @@ $PY r05b_shap_plot.py RIF > logs/r05b.log 2>&1
 $PY r10_supp_fig1.py > logs/r10.log 2>&1
 $PY r11_lineage_markers.py > logs/r11.log 2>&1
 $PY r12_facts.py > logs/r12_facts.txt 2>&1
+$PY r13_facts_extra.py > logs/r13_facts_extra.txt 2>&1
 echo FINALIZED

@@ -1,0 +1,53 @@
+{
+ "drug": "LZD",
+ "kind": "cnn_bin",
+ "n_train_orig": 9482,
+ "n_train_os": 27256,
+ "n_val": 1186,
+ "n_test": 1186,
+ "counts": {
+  "3": 4640,
+  "2": 2546,
+  "4": 1271,
+  "1": 661,
+  "0": 242,
+  "6": 63,
+  "5": 59
+ },
+ "target": {
+  "3": 4640,
+  "2": 4323,
+  "4": 3937,
+  "1": 4216,
+  "0": 3797,
+  "6": 3174,
+  "5": 3169
+ },
+ "n_features": 357,
+ "best_params": {
+  "lr": 0.0009567348231603429,
+  "weight_decay": 1.2611236054600694e-06,
+  "conv_dropout_rate": 0.31849505367522657,
+  "dense_dropout_rate": 0.0077727818095158305,
+  "num_filters": 74,
+  "num_conv_layers": 2,
+  "num_dense_neurons": 256,
+  "num_dense_layers": 1
+ },
+ "optuna_secs": 6440,
+ "seeds": {
+  "42": {
+   "val_loss": 0.1929870125967978,
+   "best_epoch": 4
+  },
+  "43": {
+   "val_loss": 0.1936616938039786,
+   "best_epoch": 2
+  },
+  "44": {
+   "val_loss": 0.1937220438837402,
+   "best_epoch": 3
+  }
+ },
+ "secs": 6909
+}

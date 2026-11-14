@@ -1,0 +1,55 @@
+{
+ "drug": "MXF",
+ "kind": "cnn_bin",
+ "n_train_orig": 9488,
+ "n_train_os": 20154,
+ "n_val": 1186,
+ "n_test": 1186,
+ "counts": {
+  "2": 3183,
+  "3": 2117,
+  "1": 1715,
+  "0": 759,
+  "6": 464,
+  "4": 445,
+  "7": 432,
+  "5": 373
+ },
+ "target": {
+  "2": 3183,
+  "3": 3005,
+  "1": 2603,
+  "0": 2537,
+  "6": 2242,
+  "4": 2223,
+  "7": 2210,
+  "5": 2151
+ },
+ "n_features": 560,
+ "best_params": {
+  "lr": 0.0009889453991964716,
+  "weight_decay": 0.00038679895471664005,
+  "conv_dropout_rate": 0.18925720723760966,
+  "dense_dropout_rate": 0.3410215085158998,
+  "num_filters": 49,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 236,
+  "num_dense_layers": 1
+ },
+ "optuna_secs": 7610,
+ "seeds": {
+  "42": {
+   "val_loss": 0.15568350082103158,
+   "best_epoch": 7
+  },
+  "43": {
+   "val_loss": 0.15754778577646156,
+   "best_epoch": 6
+  },
+  "44": {
+   "val_loss": 0.1574651125008099,
+   "best_epoch": 2
+  }
+ },
+ "secs": 8246
+}

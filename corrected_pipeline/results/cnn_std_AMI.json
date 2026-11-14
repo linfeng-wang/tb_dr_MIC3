@@ -1,0 +1,53 @@
+{
+ "drug": "AMI",
+ "kind": "cnn_std",
+ "n_train_orig": 9390,
+ "n_train_os": 26921,
+ "n_val": 1174,
+ "n_test": 1174,
+ "counts": {
+  "0": 5511,
+  "1": 2741,
+  "6": 549,
+  "2": 467,
+  "3": 70,
+  "4": 27,
+  "5": 25
+ },
+ "target": {
+  "0": 5511,
+  "1": 4519,
+  "6": 3858,
+  "2": 4022,
+  "3": 3181,
+  "4": 3138,
+  "5": 2692
+ },
+ "n_features": 362,
+ "best_params": {
+  "lr": 0.0008142120841588115,
+  "weight_decay": 1.055555333664687e-06,
+  "conv_dropout_rate": 0.23317916206492492,
+  "dense_dropout_rate": 0.0029125962464887894,
+  "num_filters": 81,
+  "num_conv_layers": 2,
+  "num_dense_neurons": 256,
+  "num_dense_layers": 1
+ },
+ "optuna_secs": 5381,
+ "seeds": {
+  "42": {
+   "val_loss": 0.15964473268648632,
+   "best_epoch": 10
+  },
+  "43": {
+   "val_loss": 0.15959153434791598,
+   "best_epoch": 1
+  },
+  "44": {
+   "val_loss": 0.16371016100277486,
+   "best_epoch": 7
+  }
+ },
+ "secs": 6317
+}

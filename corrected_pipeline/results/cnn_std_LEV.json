@@ -1,0 +1,55 @@
+{
+ "drug": "LEV",
+ "kind": "cnn_std",
+ "n_train_orig": 9463,
+ "n_train_os": 32574,
+ "n_val": 1183,
+ "n_test": 1183,
+ "counts": {
+  "2": 4456,
+  "1": 2444,
+  "3": 630,
+  "5": 523,
+  "6": 522,
+  "0": 343,
+  "4": 316,
+  "7": 229
+ },
+ "target": {
+  "2": 4456,
+  "1": 4222,
+  "3": 4186,
+  "5": 4078,
+  "6": 4077,
+  "0": 3899,
+  "4": 3872,
+  "7": 3784
+ },
+ "n_features": 563,
+ "best_params": {
+  "lr": 0.0003027147290316931,
+  "weight_decay": 0.00018183320013855049,
+  "conv_dropout_rate": 0.14633383736784186,
+  "dense_dropout_rate": 0.15639857761850612,
+  "num_filters": 98,
+  "num_conv_layers": 2,
+  "num_dense_neurons": 165,
+  "num_dense_layers": 1
+ },
+ "optuna_secs": 9918,
+ "seeds": {
+  "42": {
+   "val_loss": 0.18269473712321369,
+   "best_epoch": 3
+  },
+  "43": {
+   "val_loss": 0.18658995406665946,
+   "best_epoch": 5
+  },
+  "44": {
+   "val_loss": 0.18163143022777867,
+   "best_epoch": 4
+  }
+ },
+ "secs": 11076
+}

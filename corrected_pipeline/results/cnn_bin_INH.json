@@ -1,0 +1,55 @@
+{
+ "drug": "INH",
+ "kind": "cnn_bin",
+ "n_train_orig": 9388,
+ "n_train_os": 13652,
+ "n_val": 1174,
+ "n_test": 1174,
+ "counts": {
+  "1": 2708,
+  "7": 2602,
+  "0": 1945,
+  "6": 1106,
+  "3": 290,
+  "5": 275,
+  "4": 244,
+  "2": 218
+ },
+ "target": {
+  "1": 2708,
+  "7": 2602,
+  "0": 1945,
+  "6": 1817,
+  "3": 1178,
+  "5": 1164,
+  "4": 1132,
+  "2": 1106
+ },
+ "n_features": 806,
+ "best_params": {
+  "lr": 0.0009663759164375098,
+  "weight_decay": 2.4585237535674353e-06,
+  "conv_dropout_rate": 0.5045281837931207,
+  "dense_dropout_rate": 0.30782114317244785,
+  "num_filters": 100,
+  "num_conv_layers": 2,
+  "num_dense_neurons": 174,
+  "num_dense_layers": 2
+ },
+ "optuna_secs": 4801,
+ "seeds": {
+  "42": {
+   "val_loss": 0.09875725443257587,
+   "best_epoch": 12
+  },
+  "43": {
+   "val_loss": 0.09753994793461372,
+   "best_epoch": 15
+  },
+  "44": {
+   "val_loss": 0.09474460821237028,
+   "best_epoch": 19
+  }
+ },
+ "secs": 5935
+}

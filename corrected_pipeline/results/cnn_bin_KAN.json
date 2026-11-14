@@ -1,0 +1,51 @@
+{
+ "drug": "KAN",
+ "kind": "cnn_bin",
+ "n_train_orig": 9437,
+ "n_train_os": 22860,
+ "n_val": 1180,
+ "n_test": 1180,
+ "counts": {
+  "1": 4520,
+  "0": 2763,
+  "2": 1315,
+  "5": 564,
+  "3": 197,
+  "4": 78
+ },
+ "target": {
+  "1": 4520,
+  "0": 4452,
+  "2": 3981,
+  "5": 3587,
+  "3": 3131,
+  "4": 3189
+ },
+ "n_features": 361,
+ "best_params": {
+  "lr": 0.0009660536078657998,
+  "weight_decay": 8.319131630376718e-06,
+  "conv_dropout_rate": 0.510910431714034,
+  "dense_dropout_rate": 0.1160064253344756,
+  "num_filters": 117,
+  "num_conv_layers": 3,
+  "num_dense_neurons": 167,
+  "num_dense_layers": 3
+ },
+ "optuna_secs": 6483,
+ "seeds": {
+  "42": {
+   "val_loss": 0.14525561226626574,
+   "best_epoch": 5
+  },
+  "43": {
+   "val_loss": 0.142558880377624,
+   "best_epoch": 15
+  },
+  "44": {
+   "val_loss": 0.1450477257118387,
+   "best_epoch": 5
+  }
+ },
+ "secs": 8036
+}

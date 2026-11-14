@@ -1,0 +1,13 @@
+drug,genes,n_features,n_train,n_train_os,n_val,n_test
+AMI,"rrs, eis",362,9390,26921,1174,1174
+BDQ,"mmpR5, atpE, pepQ",233,9393,19288,1175,1175
+CFZ,"mmpR5, pepQ",212,9374,31598,1172,1172
+DLM,"fgd1, fbiA, fbiB, fbiC, fbiD, ddn",600,9274,36234,1160,1160
+EMB,"embA, embB, embC",867,9457,19145,1183,1183
+ETH,"ethA, inhA",784,9440,14774,1180,1180
+INH,"inhA, katG, kasA, ahpC, fabG1",806,9388,13652,1174,1174
+KAN,"rrs, eis",361,9437,22860,1180,1180
+LEV,"gyrA, gyrB",563,9463,32574,1183,1183
+LZD,"rrl, rplC",357,9482,27256,1186,1186
+MXF,"gyrA, gyrB",560,9488,20154,1186,1186
+RIF,"rpoA, rpoB, rpoC",865,9415,19192,1177,1177

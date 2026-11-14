@@ -1,0 +1,597 @@
+== Table 2 (CNN mean of 3 seeds, SD)
+drug  cnn_bin_dda  cnn_bin_dda_sd  cnn_std_dda  cnn_std_dda_sd  xgb_dda  xgb_bin_dda  cnn_bin_auc  cnn_bin_auc_sd  cnn_std_auc  cnn_std_auc_sd  xgb_auc  xgb_bin_auc
+ AMI        0.902           0.023        0.832           0.019    0.900        0.927        0.581           0.005        0.627           0.017    0.618        0.586
+ BDQ        0.797           0.175        0.837           0.099    0.904        0.897        0.615           0.024        0.523           0.077    0.446        0.592
+ CFZ        0.844           0.004        0.593           0.504    0.841        0.843        0.545           0.025        0.552           0.010    0.536        0.552
+ DLM        0.877           0.004        0.800           0.077    0.859        0.880        0.556           0.036        0.547           0.025    0.557        0.516
+ EMB        0.892           0.004        0.894           0.011    0.904        0.892        0.684           0.002        0.782           0.002    0.781        0.682
+ ETH        0.841           0.006        0.781           0.004    0.816        0.871        0.646           0.004        0.636           0.009    0.613        0.635
+ INH        0.923           0.005        0.906           0.009    0.920        0.927        0.831           0.004        0.841           0.000    0.835        0.841
+ KAN        0.953           0.003        0.924           0.012    0.955        0.957        0.712           0.008        0.707           0.003    0.715        0.716
+ LEV        0.900           0.027        0.769           0.175    0.881        0.890        0.749           0.014        0.760           0.002    0.748        0.775
+ LZD        0.830           0.025        0.663           0.249    0.853        0.869        0.599           0.007        0.579           0.024    0.557        0.606
+ MXF        0.664           0.117        0.596           0.118    0.815        0.819        0.720           0.002        0.736           0.006    0.728        0.719
+ RIF        0.778           0.005        0.784           0.072    0.869        0.873        0.789           0.005        0.792           0.016    0.790        0.814
+xgb_dda: mean 0.88 SD 0.04 range 0.82-0.96
+cnn_std_dda: mean 0.78 SD 0.11 range 0.59-0.92
+cnn_bin_dda: mean 0.85 SD 0.08 range 0.66-0.95
+xgb_bin_dda: mean 0.89 SD 0.04 range 0.82-0.96
+xgb_auc: mean 0.66 SD 0.12 range 0.45-0.83
+cnn_std_auc: mean 0.67 SD 0.11 range 0.52-0.84
+cnn_bin_auc: mean 0.67 SD 0.09 range 0.55-0.83
+per-seed DDA:
+drug                                            cnn_bin_dda_seeds                                              cnn_std_dda_seeds
+ AMI  [0.8764906303236797, 0.919931856899489, 0.9105621805792163]   [0.8364565587734242, 0.8475298126064736, 0.8109028960817717]
+ BDQ [0.8961702127659574, 0.8995744680851064, 0.5948936170212766]   [0.8961702127659574, 0.7225531914893617, 0.8927659574468085]
+ CFZ [0.8464163822525598, 0.8387372013651877, 0.8464163822525598] [0.8233788395904437, 0.015358361774744027, 0.9402730375426621]
+ DLM [0.8758620689655172, 0.8741379310344828, 0.8810344827586207]   [0.8448275862068966, 0.7112068965517241, 0.8439655172413794]
+ EMB [0.8875739644970414, 0.8943364327979713, 0.8926458157227388]   [0.9061707523245984, 0.8884192730346576, 0.8867286559594252]
+ ETH [0.8457627118644068, 0.8432203389830508, 0.8338983050847457]   [0.7771186440677966, 0.7813559322033898, 0.7847457627118644]
+ INH [0.9267461669505963, 0.9250425894378195, 0.9173764906303237]   [0.8960817717206133, 0.9105621805792163, 0.9114139693356048]
+ KAN               [0.95, 0.9533898305084746, 0.9550847457627119]   [0.9372881355932203, 0.9135593220338983, 0.9203389830508475]
+ LEV [0.9137785291631445, 0.8689771766694844, 0.9171597633136095]    [0.8757396449704142, 0.5663567202028741, 0.863905325443787]
+ LZD [0.8263069139966274, 0.8077571669477235, 0.8566610455311973]    [0.8077571669477235, 0.3752107925801012, 0.806070826306914]
+ MXF   [0.7124789207419899, 0.53035413153457, 0.7487352445193929]   [0.5362563237774031, 0.5202360876897133, 0.7318718381112985]
+ RIF [0.7799490229396772, 0.7816482582837723, 0.7714528462192014]    [0.8640611724723875, 0.762107051826678, 0.7247238742565846]
+
+== McNemar (seed 42; sig_up/sig_down = number of seeds with Holm P<0.05)
+drug  seed    n  dda_std  dda_bin  both  bin_only  std_only  neither      p  p_holm  sig_up  sig_down
+ AMI    42 1174   0.8365   0.8765   972        57        10      135 0.0000  0.0000       3         0
+ BDQ    42 1175   0.8962   0.8962  1043        10        10      112 1.0000  1.0000       1         1
+ CFZ    42 1172   0.8234   0.8464   957        35         8      172 0.0000  0.0003       2         1
+ DLM    42 1160   0.8448   0.8759   952        64        28      116 0.0002  0.0013       3         0
+ EMB    42 1183   0.9062   0.8876  1009        41        63       70 0.0390  0.0779       0         0
+ ETH    42 1180   0.7771   0.8458   871       127        46      136 0.0000  0.0000       3         0
+ INH    42 1174   0.8961   0.9267  1036        52        16       70 0.0000  0.0001       2         0
+ KAN    42 1180   0.9373   0.9500  1094        27        12       47 0.0237  0.0711       2         0
+ LEV    42 1183   0.8757   0.9138   984        97        52       50 0.0003  0.0014       3         0
+ LZD    42 1186   0.8078   0.8263   939        41        19      187 0.0062  0.0249       3         0
+ MXF    42 1186   0.5363   0.7125   582       263        54      287 0.0000  0.0000       1         0
+ RIF    42 1177   0.8641   0.7799   853        65       164       95 0.0000  0.0000       2         1
+
+== class-wise AUC
+drug   mic  n_test  cnn_bin  cnn_std  xgb  xgb_bin
+ AMI  0.25     689     0.60     0.59 0.60     0.61
+ AMI  0.50     343     0.54     0.53 0.56     0.56
+ AMI  1.00      58     0.52     0.51 0.55     0.54
+ AMI  2.00       9     0.40     0.58 0.47     0.36
+ AMI  4.00       3     0.43     0.57 0.57     0.48
+ AMI  8.00       3     0.64     0.68 0.66     0.61
+ AMI 16.00      69     0.94     0.93 0.92     0.94
+ BDQ  0.02     283     0.52     0.52 0.52     0.52
+ BDQ  0.03     403     0.52     0.51 0.51     0.52
+ BDQ  0.06     377     0.51     0.52 0.51     0.51
+ BDQ  0.12      78     0.50     0.50 0.49     0.49
+ BDQ  0.25      24     0.44     0.58 0.48     0.33
+ BDQ  0.50       6     0.90     0.52 0.51     0.90
+ BDQ  1.00       3     0.54     0.37 0.52     0.49
+ BDQ  2.00       1     0.99     0.68 0.04     0.98
+ CFZ  0.06     732     0.52     0.51 0.51     0.53
+ CFZ  0.12     268     0.50     0.50 0.50     0.50
+ CFZ  0.25     119     0.50     0.50 0.50     0.51
+ CFZ  0.50      34     0.54     0.52 0.51     0.53
+ CFZ  1.00      13     0.54     0.57 0.59     0.57
+ CFZ  2.00       4     0.68     0.73 0.63     0.74
+ CFZ  4.00       2     0.53     0.53 0.51     0.49
+ DLM  0.02     921     0.55     0.52 0.55     0.55
+ DLM  0.03     134     0.49     0.47 0.53     0.51
+ DLM  0.06      63     0.54     0.52 0.55     0.57
+ DLM  0.12      24     0.51     0.55 0.58     0.56
+ DLM  0.25       5     0.54     0.46 0.50     0.51
+ DLM  0.50       4     0.71     0.66 0.70     0.35
+ DLM  1.00       9     0.55     0.65 0.49     0.58
+ EMB  0.25      16     0.69     0.74 0.69     0.67
+ EMB  0.50     112     0.68     0.67 0.67     0.66
+ EMB  1.00     397     0.74     0.74 0.75     0.75
+ EMB  2.00     296     0.66     0.69 0.70     0.68
+ EMB  4.00     149     0.23     0.84 0.86     0.24
+ EMB  8.00     137     0.86     0.89 0.88     0.85
+ EMB 16.00      76     0.92     0.92 0.93     0.93
+ ETH  0.25      26     0.58     0.58 0.54     0.57
+ ETH  0.50     182     0.65     0.60 0.58     0.65
+ ETH  1.00     439     0.68     0.63 0.60     0.68
+ ETH  2.00     282     0.57     0.55 0.57     0.57
+ ETH  4.00      91     0.28     0.67 0.63     0.28
+ ETH  8.00      71     0.85     0.64 0.61     0.80
+ ETH 16.00      89     0.91     0.79 0.76     0.91
+ INH  0.02     243     0.84     0.84 0.84     0.85
+ INH  0.05     339     0.86     0.85 0.85     0.86
+ INH  0.10      27     0.67     0.68 0.68     0.67
+ INH  0.20      36     0.77     0.86 0.84     0.79
+ INH  0.40      31     0.90     0.90 0.87     0.95
+ INH  0.80      34     0.85     0.85 0.86     0.87
+ INH  1.60     138     0.83     0.82 0.82     0.83
+ INH  3.20     326     0.92     0.90 0.90     0.92
+ KAN  1.00     345     0.60     0.59 0.60     0.61
+ KAN  2.00     565     0.58     0.59 0.58     0.59
+ KAN  4.00     164     0.57     0.57 0.58     0.57
+ KAN  8.00      25     0.74     0.76 0.76     0.70
+ KAN 16.00      10     0.84     0.83 0.88     0.88
+ KAN 32.00      71     0.95     0.90 0.88     0.95
+ LEV  0.12      43     0.57     0.61 0.63     0.64
+ LEV  0.25     306     0.60     0.63 0.65     0.66
+ LEV  0.50     557     0.67     0.70 0.70     0.71
+ LEV  1.00      79     0.56     0.64 0.63     0.61
+ LEV  2.00      40     0.79     0.83 0.78     0.79
+ LEV  4.00      65     0.92     0.88 0.85     0.91
+ LEV  8.00      65     0.93     0.89 0.89     0.93
+ LEV 16.00      28     0.94     0.92 0.85     0.95
+ LZD  0.06      30     0.49     0.51 0.53     0.50
+ LZD  0.12      83     0.53     0.52 0.54     0.54
+ LZD  0.25     318     0.53     0.53 0.54     0.54
+ LZD  0.50     580     0.51     0.52 0.52     0.51
+ LZD  1.00     159     0.57     0.57 0.57     0.57
+ LZD  2.00       8     0.79     0.61 0.38     0.76
+ LZD  4.00       8     0.78     0.80 0.83     0.82
+ MXF  0.06      95     0.67     0.68 0.67     0.68
+ MXF  0.12     214     0.62     0.59 0.59     0.59
+ MXF  0.25     398     0.65     0.65 0.63     0.64
+ MXF  0.50     264     0.61     0.62 0.62     0.62
+ MXF  1.00      56     0.45     0.64 0.63     0.46
+ MXF  2.00      47     0.89     0.87 0.86     0.90
+ MXF  4.00      58     0.91     0.90 0.90     0.91
+ MXF  8.00      54     0.95     0.94 0.93     0.95
+ RIF  0.06     433     0.83     0.81 0.82     0.83
+ RIF  0.12     209     0.79     0.80 0.80     0.80
+ RIF  0.25      72     0.70     0.70 0.73     0.71
+ RIF  0.50      18     0.47     0.72 0.77     0.48
+ RIF  1.00      11     0.80     0.70 0.75     0.94
+ RIF  2.00      15     0.89     0.84 0.87     0.91
+ RIF  4.00      16     0.88     0.82 0.63     0.86
+ RIF  8.00     403     0.96     0.95 0.94     0.96
+
+== extra metrics (S10)
+drug                              model    n  n_R  dda  bal_acc  macro_f1  R_recall  R_precision  R_f1  dda_R  dda_S
+ AMI                            XGBoost 1174   84 0.90     0.27      0.24      0.74         0.57  0.65   0.74   0.91
+ AMI           Binary-supported XGBoost 1174   84 0.93     0.27      0.25      0.74         0.84  0.78   0.73   0.94
+ AMI                                CNN 1174   84 0.83     0.26      0.23      0.74         0.38  0.50   0.74   0.84
+ AMI               Binary-supported CNN 1174   84 0.90     0.28      0.25      0.74         0.83  0.78   0.73   0.92
+ AMI Most frequent category (reference) 1174   84 0.88     0.14      0.11      0.00         0.00  0.00   0.00   0.95
+ BDQ                            XGBoost 1175   10 0.90     0.14      0.09      0.00         0.00  0.00   0.00   0.91
+ BDQ           Binary-supported XGBoost 1175   10 0.90     0.13      0.07      0.60         0.21  0.31   0.60   0.90
+ BDQ                                CNN 1175   10 0.84     0.14      0.09      0.00         0.00  0.00   0.00   0.84
+ BDQ               Binary-supported CNN 1175   10 0.80     0.18      0.14      0.60         0.22  0.32   0.53   0.80
+ BDQ Most frequent category (reference) 1175   10 0.90     0.12      0.06      0.00         0.00  0.00   0.00   0.91
+ CFZ                            XGBoost 1172   53 0.84     0.19      0.16      0.08         0.17  0.10   0.08   0.88
+ CFZ           Binary-supported XGBoost 1172   53 0.84     0.15      0.14      0.09         0.26  0.14   0.06   0.88
+ CFZ                                CNN 1172   53 0.59     0.18      0.08      0.40         0.13  0.11   0.11   0.62
+ CFZ               Binary-supported CNN 1172   53 0.84     0.15      0.12      0.09         0.26  0.14   0.04   0.88
+ CFZ Most frequent category (reference) 1172   53 0.85     0.14      0.11      0.00         0.00  0.00   0.00   0.89
+ DLM                            XGBoost 1160   18 0.86     0.17      0.16      0.06         0.03  0.04   0.06   0.87
+ DLM           Binary-supported XGBoost 1160   18 0.88     0.18      0.17      0.06         0.33  0.10   0.06   0.89
+ DLM                                CNN 1160   18 0.80     0.17      0.12      0.19         0.03  0.05   0.17   0.81
+ DLM               Binary-supported CNN 1160   18 0.88     0.18      0.17      0.06         0.33  0.10   0.06   0.89
+ DLM Most frequent category (reference) 1160   18 0.91     0.14      0.13      0.00         0.00  0.00   0.00   0.92
+ EMB                            XGBoost 1183  213 0.90     0.39      0.38      0.65         0.74  0.69   0.87   0.91
+ EMB           Binary-supported XGBoost 1183  213 0.89     0.36      0.30      0.94         0.54  0.68   0.95   0.88
+ EMB                                CNN 1183  213 0.89     0.36      0.35      0.58         0.76  0.66   0.83   0.91
+ EMB               Binary-supported CNN 1183  213 0.89     0.33      0.26      0.94         0.54  0.68   0.94   0.88
+ EMB Most frequent category (reference) 1183  213 0.68     0.14      0.07      0.00         0.00  0.00   0.00   0.83
+ ETH                            XGBoost 1180  160 0.82     0.24      0.23      0.34         0.63  0.44   0.39   0.88
+ ETH           Binary-supported XGBoost 1180  160 0.87     0.32      0.25      0.86         0.50  0.63   0.87   0.87
+ ETH                                CNN 1180  160 0.78     0.25      0.22      0.43         0.48  0.45   0.50   0.83
+ ETH               Binary-supported CNN 1180  160 0.84     0.33      0.26      0.86         0.50  0.63   0.88   0.83
+ ETH Most frequent category (reference) 1180  160 0.77     0.14      0.08      0.00         0.00  0.00   0.00   0.89
+ INH                            XGBoost 1174  565 0.92     0.40      0.41      0.91         0.98  0.94   0.85   0.98
+ INH           Binary-supported XGBoost 1174  565 0.93     0.41      0.41      0.95         0.97  0.96   0.87   0.98
+ INH                                CNN 1174  565 0.91     0.40      0.39      0.92         0.97  0.94   0.85   0.96
+ INH               Binary-supported CNN 1174  565 0.92     0.40      0.36      0.95         0.97  0.96   0.87   0.97
+ INH Most frequent category (reference) 1174  565 0.52     0.12      0.06      0.00         0.00  0.00   0.00   1.00
+ KAN                            XGBoost 1180  106 0.96     0.47      0.43      0.77         0.75  0.76   0.79   0.97
+ KAN           Binary-supported XGBoost 1180  106 0.96     0.47      0.42      0.82         0.76  0.79   0.80   0.97
+ KAN                                CNN 1180  106 0.92     0.46      0.37      0.84         0.53  0.65   0.80   0.94
+ KAN               Binary-supported CNN 1180  106 0.95     0.44      0.41      0.82         0.76  0.79   0.79   0.97
+ KAN Most frequent category (reference) 1180  106 0.91     0.17      0.11      0.00         0.00  0.00   0.00   1.00
+ LEV                            XGBoost 1183  198 0.88     0.35      0.31      0.81         0.89  0.85   0.75   0.91
+ LEV           Binary-supported XGBoost 1183  198 0.89     0.35      0.30      0.91         0.88  0.90   0.80   0.91
+ LEV                                CNN 1183  198 0.77     0.33      0.29      0.82         0.89  0.85   0.74   0.77
+ LEV               Binary-supported CNN 1183  198 0.90     0.26      0.19      0.91         0.88  0.90   0.73   0.93
+ LEV Most frequent category (reference) 1183  198 0.80     0.12      0.08      0.00         0.00  0.00   0.00   0.96
+ LZD                            XGBoost 1186   16 0.85     0.26      0.21      0.56         0.16  0.25   0.56   0.86
+ LZD           Binary-supported XGBoost 1186   16 0.87     0.29      0.27      0.62         0.77  0.69   0.69   0.87
+ LZD                                CNN 1186   16 0.66     0.24      0.13      0.60         0.12  0.20   0.60   0.66
+ LZD               Binary-supported CNN 1186   16 0.83     0.25      0.19      0.60         0.64  0.62   0.67   0.83
+ LZD Most frequent category (reference) 1186   16 0.89     0.14      0.09      0.00         0.00  0.00   0.00   0.90
+ MXF                            XGBoost 1186  159 0.82     0.31      0.27      0.87         0.77  0.82   0.75   0.83
+ MXF           Binary-supported XGBoost 1186  159 0.82     0.31      0.26      0.93         0.74  0.83   0.81   0.82
+ MXF                                CNN 1186  159 0.60     0.31      0.25      0.84         0.77  0.80   0.77   0.57
+ MXF               Binary-supported CNN 1186  159 0.66     0.30      0.22      0.93         0.74  0.83   0.86   0.63
+ MXF Most frequent category (reference) 1186  159 0.74     0.12      0.06      0.00         0.00  0.00   0.00   0.85
+ RIF                            XGBoost 1177  445 0.87     0.36      0.34      0.92         0.93  0.93   0.87   0.87
+ RIF           Binary-supported XGBoost 1177  445 0.87     0.37      0.32      0.97         0.92  0.95   0.88   0.87
+ RIF                                CNN 1177  445 0.78     0.37      0.32      0.91         0.93  0.92   0.84   0.75
+ RIF               Binary-supported CNN 1177  445 0.78     0.36      0.30      0.97         0.92  0.95   0.86   0.73
+ RIF Most frequent category (reference) 1177  445 0.55     0.12      0.07      0.00         0.00  0.00   0.00   0.88
+
+== TB-Profiler (S11)
+drug    n  n_R  tbp_pos  sens  spec  n_disc  cnn_bin_conc  cnn_bin_disc  cnn_std_conc  cnn_std_disc  xgb_bin_conc  xgb_bin_disc
+ AMI 1174   84       74  0.74  0.99      34          0.93          0.05          0.85          0.14          0.95          0.06
+ BDQ 1175   10       29  0.60  0.98      27          0.81          0.11          0.85          0.38          0.92          0.04
+ CFZ 1172   53       19  0.09  0.99      62          0.89          0.02          0.62          0.14          0.89          0.00
+ DLM 1160   18        3  0.06  1.00      19          0.89          0.00          0.81          0.18          0.89          0.05
+ EMB 1183  213      371  0.94  0.82     184          0.94          0.64          0.91          0.80          0.94          0.64
+ ETH 1180  160      278  0.86  0.86     162          0.92          0.33          0.84          0.42          0.95          0.37
+ INH 1174  565      549  0.95  0.98      46          0.96          0.10          0.93          0.21          0.96          0.07
+ KAN 1180  106      114  0.82  0.97      46          0.98          0.22          0.95          0.38          0.99          0.24
+ LEV 1183  198      206  0.91  0.97      42          0.93          0.07          0.79          0.21          0.91          0.29
+ LZD 1186   16       13  0.62  1.00       9          0.83          0.22          0.67          0.15          0.88          0.11
+ MXF 1186  159      199  0.93  0.95      62          0.69          0.12          0.61          0.27          0.85          0.18
+ RIF 1177  445      470  0.97  0.95      49          0.81          0.05          0.81          0.25          0.91          0.06
+
+== oversampling methods (S12)
+drug sampler  n_train   dda  auc_ovr  bal_acc  macro_f1  R_recall                                                          error
+ AMI    none   9390.0 0.928    0.606    0.272     0.248     0.726                                                            NaN
+ AMI  random  26921.0 0.900    0.618    0.267     0.245     0.738                                                            NaN
+ AMI   smote  26921.0 0.922    0.642    0.277     0.267     0.738                                                            NaN
+ AMI  adasyn  27793.0 0.933    0.637    0.229     0.198     0.738                                                            NaN
+ BDQ    none   9393.0 0.905    0.514    0.132     0.085     0.000                                                            NaN
+ BDQ  random  19288.0 0.904    0.446    0.136     0.088     0.000                                                            NaN
+ BDQ   smote  19288.0 0.906    0.449    0.137     0.092     0.000                                                            NaN
+ BDQ  adasyn      NaN   NaN      NaN      NaN       NaN       NaN No samples will be generated with the provided ratio settings.
+ CFZ    none   9374.0 0.855    0.539    0.145     0.115     0.000                                                            NaN
+ CFZ  random  31598.0 0.841    0.536    0.192     0.162     0.075                                                            NaN
+ CFZ   smote  31598.0 0.851    0.494    0.155     0.132     0.019                                                            NaN
+ CFZ  adasyn  32532.0 0.951    0.494    0.155     0.080     0.019                                                            NaN
+ DLM    none   9274.0 0.909    0.569    0.143     0.127     0.000                                                            NaN
+ DLM  random  36234.0 0.859    0.557    0.172     0.162     0.056                                                            NaN
+ DLM   smote  36234.0 0.893    0.566    0.174     0.163     0.056                                                            NaN
+ DLM  adasyn  35783.0 0.899    0.563    0.159     0.157     0.056                                                            NaN
+ EMB    none   9457.0 0.921    0.776    0.360     0.344     0.615                                                            NaN
+ EMB  random  19145.0 0.904    0.781    0.386     0.378     0.648                                                            NaN
+ EMB   smote  19145.0 0.902    0.774    0.384     0.376     0.634                                                            NaN
+ EMB  adasyn  18587.0 0.905    0.764    0.379     0.351     0.662                                                            NaN
+ ETH    none   9440.0 0.828    0.610    0.245     0.236     0.300                                                            NaN
+ ETH  random  14774.0 0.816    0.613    0.239     0.230     0.338                                                            NaN
+ ETH   smote  14774.0 0.823    0.616    0.240     0.236     0.331                                                            NaN
+ ETH  adasyn  14252.0 0.823    0.619    0.247     0.247     0.331                                                            NaN
+ INH    none   9388.0 0.910    0.832    0.347     0.336     0.904                                                            NaN
+ INH  random  13652.0 0.920    0.835    0.404     0.410     0.906                                                            NaN
+ INH   smote  13652.0 0.923    0.834    0.398     0.406     0.904                                                            NaN
+ INH  adasyn  13600.0 0.916    0.833    0.345     0.335     0.906                                                            NaN
+ KAN    none   9437.0 0.968    0.726    0.402     0.394     0.670                                                            NaN
+ KAN  random  22860.0 0.955    0.715    0.466     0.429     0.774                                                            NaN
+ KAN   smote  22860.0 0.958    0.720    0.460     0.452     0.764                                                            NaN
+ KAN  adasyn  23187.0 0.834    0.709    0.357     0.183     0.821                                                            NaN
+ LEV    none   9463.0 0.911    0.766    0.301     0.279     0.808                                                            NaN
+ LEV  random  32574.0 0.881    0.748    0.348     0.306     0.808                                                            NaN
+ LEV   smote  32574.0 0.869    0.746    0.346     0.309     0.808                                                            NaN
+ LEV  adasyn  33025.0 0.887    0.750    0.329     0.301     0.803                                                            NaN
+ LZD    none   9482.0 0.896    0.587    0.234     0.173     0.500                                                            NaN
+ LZD  random  27256.0 0.853    0.557    0.257     0.206     0.562                                                            NaN
+ LZD   smote  27256.0 0.872    0.552    0.254     0.196     0.562                                                            NaN
+ LZD  adasyn  27511.0 0.825    0.548    0.256     0.167     0.562                                                            NaN
+ MXF    none   9488.0 0.829    0.738    0.298     0.233     0.868                                                            NaN
+ MXF  random  20154.0 0.815    0.728    0.313     0.269     0.874                                                            NaN
+ MXF   smote  20154.0 0.819    0.728    0.321     0.284     0.874                                                            NaN
+ MXF  adasyn  19128.0 0.827    0.721    0.315     0.286     0.874                                                            NaN
+ RIF    none   9415.0 0.878    0.819    0.324     0.312     0.919                                                            NaN
+ RIF  random  19192.0 0.869    0.790    0.359     0.340     0.919                                                            NaN
+ RIF   smote  19192.0 0.884    0.785    0.363     0.363     0.921                                                            NaN
+ RIF  adasyn  18981.0 0.877    0.780    0.362     0.359     0.924                                                            NaN
+dda: smote - random: min -0.012 max 0.034 median 0.005
+dda: adasyn - random: min -0.121 max 0.109 median 0.007
+dda: random - none: min -0.049 max 0.010 median -0.014
+auc_ovr: smote - random: min -0.042 max 0.024 median -0.000
+auc_ovr: adasyn - random: min -0.042 max 0.019 median -0.006
+auc_ovr: random - none: min -0.068 max 0.012 median -0.011
+bal_acc: smote - random: min -0.037 max 0.011 median -0.001
+bal_acc: adasyn - random: min -0.108 max 0.009 median -0.013
+bal_acc: random - none: min -0.006 max 0.064 median 0.027
+R_recall: smote - random: min -0.057 max 0.002 median 0.000
+R_recall: adasyn - random: min -0.057 max 0.047 median 0.000
+R_recall: random - none: min 0.000 max 0.104 median 0.022
+
+== sensitivity (S13)
+drug                model                                            analysis   dda   auc  bal_acc  R_recall  dda_sd  auc_sd  bal_acc_sd  R_recall_sd  dda_min  dda_max
+ AMI         Standard CNN Features in genomic-position order (reported model) 0.832 0.627    0.259     0.742   0.019   0.017       0.014        0.007    0.811    0.848
+ AMI         Standard CNN                 Features in randomly permuted order 0.846 0.611    0.273     0.738   0.009   0.024       0.001        0.000    0.836    0.854
+ AMI Binary-supported CNN   Phenotypic indicator in training (reported model) 0.902 0.581    0.276     0.738   0.023   0.005       0.006        0.000    0.876    0.920
+ AMI Binary-supported CNN                        TB-Profiler call in training 0.840 0.616    0.261     0.750   0.011   0.001       0.005        0.000    0.828    0.849
+ BDQ         Standard CNN Features in genomic-position order (reported model) 0.837 0.523    0.141     0.000   0.099   0.077       0.002        0.000    0.723    0.896
+ BDQ         Standard CNN                 Features in randomly permuted order 0.832 0.440    0.136     0.033   0.099   0.013       0.005        0.058    0.718    0.890
+ BDQ Binary-supported CNN   Phenotypic indicator in training (reported model) 0.797 0.615    0.184     0.600   0.175   0.024       0.073        0.000    0.595    0.900
+ BDQ Binary-supported CNN                        TB-Profiler call in training 0.831 0.578    0.287     0.533   0.101   0.074       0.073        0.058    0.714    0.894
+ CFZ         Standard CNN Features in genomic-position order (reported model) 0.593 0.552    0.175     0.396   0.504   0.010       0.033        0.507    0.015    0.940
+ CFZ         Standard CNN                 Features in randomly permuted order 0.864 0.549    0.173     0.075   0.061   0.014       0.027        0.019    0.828    0.935
+ CFZ Binary-supported CNN   Phenotypic indicator in training (reported model) 0.844 0.545    0.148     0.094   0.004   0.025       0.006        0.000    0.839    0.846
+ CFZ Binary-supported CNN                        TB-Profiler call in training 0.855 0.524    0.183     0.132   0.055   0.003       0.021        0.019    0.819    0.918
+ DLM         Standard CNN Features in genomic-position order (reported model) 0.800 0.547    0.169     0.185   0.077   0.025       0.032        0.085    0.711    0.845
+ DLM         Standard CNN                 Features in randomly permuted order 0.849 0.520    0.158     0.056   0.015   0.019       0.016        0.056    0.835    0.865
+ DLM Binary-supported CNN   Phenotypic indicator in training (reported model) 0.877 0.556    0.181     0.056   0.004   0.036       0.001        0.000    0.874    0.881
+ DLM Binary-supported CNN                        TB-Profiler call in training 0.770 0.524    0.177     0.167   0.058   0.015       0.024        0.056    0.734    0.837
+ EMB         Standard CNN Features in genomic-position order (reported model) 0.894 0.782    0.365     0.576   0.011   0.002       0.024        0.048    0.887    0.906
+ EMB         Standard CNN                 Features in randomly permuted order 0.864 0.773    0.356     0.545   0.008   0.004       0.034        0.049    0.857    0.873
+ EMB Binary-supported CNN   Phenotypic indicator in training (reported model) 0.892 0.684    0.332     0.939   0.004   0.002       0.020        0.000    0.888    0.894
+ EMB Binary-supported CNN                        TB-Profiler call in training 0.907 0.789    0.383     0.628   0.005   0.003       0.023        0.043    0.901    0.911
+ ETH         Standard CNN Features in genomic-position order (reported model) 0.781 0.636    0.254     0.431   0.004   0.009       0.004        0.017    0.777    0.785
+ ETH         Standard CNN                 Features in randomly permuted order 0.781 0.629    0.252     0.419   0.005   0.007       0.002        0.019    0.776    0.786
+ ETH Binary-supported CNN   Phenotypic indicator in training (reported model) 0.841 0.646    0.326     0.863   0.006   0.004       0.005        0.000    0.834    0.846
+ ETH Binary-supported CNN                        TB-Profiler call in training 0.852 0.723    0.324     0.794   0.003   0.003       0.011        0.053    0.849    0.854
+ INH         Standard CNN Features in genomic-position order (reported model) 0.906 0.841    0.402     0.920   0.009   0.000       0.011        0.003    0.896    0.911
+ INH         Standard CNN                 Features in randomly permuted order 0.895 0.843    0.403     0.910   0.009   0.003       0.014        0.004    0.884    0.900
+ INH Binary-supported CNN   Phenotypic indicator in training (reported model) 0.923 0.831    0.397     0.945   0.005   0.004       0.001        0.000    0.917    0.927
+ INH Binary-supported CNN                        TB-Profiler call in training 0.929 0.841    0.398     0.933   0.004   0.002       0.008        0.008    0.924    0.932
+ KAN         Standard CNN Features in genomic-position order (reported model) 0.924 0.707    0.459     0.840   0.012   0.003       0.005        0.000    0.914    0.937
+ KAN         Standard CNN                 Features in randomly permuted order 0.940 0.722    0.450     0.796   0.012   0.010       0.014        0.038    0.926    0.947
+ KAN Binary-supported CNN   Phenotypic indicator in training (reported model) 0.953 0.712    0.444     0.821   0.003   0.008       0.001        0.000    0.950    0.955
+ KAN Binary-supported CNN                        TB-Profiler call in training 0.940 0.714    0.454     0.849   0.006   0.002       0.020        0.034    0.936    0.947
+ LEV         Standard CNN Features in genomic-position order (reported model) 0.769 0.760    0.332     0.818   0.175   0.002       0.006        0.009    0.566    0.876
+ LEV         Standard CNN                 Features in randomly permuted order 0.759 0.756    0.337     0.811   0.159   0.006       0.020        0.003    0.576    0.859
+ LEV Binary-supported CNN   Phenotypic indicator in training (reported model) 0.900 0.749    0.260     0.914   0.027   0.014       0.030        0.000    0.869    0.917
+ LEV Binary-supported CNN                        TB-Profiler call in training 0.890 0.764    0.274     0.911   0.008   0.004       0.001        0.003    0.881    0.895
+ LZD         Standard CNN Features in genomic-position order (reported model) 0.663 0.579    0.244     0.604   0.249   0.024       0.005        0.036    0.375    0.808
+ LZD         Standard CNN                 Features in randomly permuted order 0.657 0.590    0.225     0.500   0.246   0.012       0.008        0.108    0.374    0.812
+ LZD Binary-supported CNN   Phenotypic indicator in training (reported model) 0.830 0.599    0.247     0.604   0.025   0.007       0.018        0.036    0.808    0.857
+ LZD Binary-supported CNN                        TB-Profiler call in training 0.800 0.556    0.257     0.646   0.009   0.012       0.009        0.036    0.793    0.810
+ MXF         Standard CNN Features in genomic-position order (reported model) 0.596 0.736    0.312     0.836   0.118   0.006       0.023        0.033    0.520    0.732
+ MXF         Standard CNN                 Features in randomly permuted order 0.576 0.728    0.307     0.824   0.098   0.004       0.016        0.057    0.513    0.689
+ MXF Binary-supported CNN   Phenotypic indicator in training (reported model) 0.664 0.720    0.299     0.931   0.117   0.002       0.035        0.000    0.530    0.749
+ MXF Binary-supported CNN                        TB-Profiler call in training 0.720 0.747    0.299     0.893   0.181   0.004       0.031        0.022    0.511    0.832
+ RIF         Standard CNN Features in genomic-position order (reported model) 0.784 0.792    0.368     0.914   0.072   0.016       0.022        0.011    0.725    0.864
+ RIF         Standard CNN                 Features in randomly permuted order 0.787 0.780    0.353     0.923   0.058   0.004       0.006        0.003    0.748    0.853
+ RIF Binary-supported CNN   Phenotypic indicator in training (reported model) 0.778 0.789    0.361     0.973   0.005   0.005       0.004        0.000    0.771    0.782
+ RIF Binary-supported CNN                        TB-Profiler call in training 0.777 0.781    0.386     0.958   0.007   0.016       0.005        0.005    0.771    0.784
+perm - position dda: AMI +0.014, BDQ -0.005, CFZ +0.271, DLM +0.049, EMB -0.030, ETH -0.001, INH -0.011, KAN +0.016, LEV -0.010, LZD -0.006, MXF -0.020, RIF +0.003
+perm - position auc: AMI -0.016, BDQ -0.083, CFZ -0.003, DLM -0.027, EMB -0.009, ETH -0.007, INH +0.002, KAN +0.015, LEV -0.004, LZD +0.011, MXF -0.008, RIF -0.013
+perm - position R_recall: AMI -0.004, BDQ +0.033, CFZ -0.321, DLM -0.130, EMB -0.031, ETH -0.012, INH -0.010, KAN -0.044, LEV -0.007, LZD -0.104, MXF -0.013, RIF +0.009
+TB-Profiler train - phenotype train dda: AMI -0.062, BDQ +0.034, CFZ +0.011, DLM -0.107, EMB +0.015, ETH +0.011, INH +0.006, KAN -0.012, LEV -0.010, LZD -0.030, MXF +0.056, RIF -0.001
+TB-Profiler train - phenotype train auc: AMI +0.035, BDQ -0.037, CFZ -0.022, DLM -0.031, EMB +0.105, ETH +0.078, INH +0.010, KAN +0.001, LEV +0.015, LZD -0.044, MXF +0.026, RIF -0.008
+TB-Profiler train - phenotype train R_recall: AMI +0.012, BDQ -0.067, CFZ +0.038, DLM +0.111, EMB -0.311, ETH -0.069, INH -0.012, KAN +0.028, LEV -0.003, LZD +0.042, MXF -0.038, RIF -0.015
+
+== predicted class distributions (seed 42) and DDA in resistant / susceptible isolates
+AMI levels [0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0] | observed [689, 343, 58, 9, 3, 3, 69] | R 84 tbp+ 74
+   cnn_bin s42: pred [902, 66, 131, 6, 3, 0, 66] DDA_R 0.73 DDA_S 0.89 | tbp+: pred [0, 0, 0, 5, 3, 0, 66] obs [4, 4, 4, 0, 0, 1, 61]
+   cnn_bin s43: pred [43, 950, 107, 5, 3, 0, 66] DDA_R 0.73 DDA_S 0.93
+   cnn_bin s44: pred [924, 122, 54, 4, 3, 0, 67] DDA_R 0.73 DDA_S 0.92
+   cnn_std s42: pred [888, 31, 124, 35, 3, 21, 72] DDA_R 0.74 DDA_S 0.84 | tbp+: pred [3, 0, 0, 4, 1, 0, 66] obs [4, 4, 4, 0, 0, 1, 61]
+   cnn_std s43: pred [52, 868, 65, 95, 3, 21, 70] DDA_R 0.74 DDA_S 0.86
+   cnn_std s44: pred [886, 25, 75, 34, 3, 72, 79] DDA_R 0.75 DDA_S 0.82
+   xgb: pred [1048, 15, 3, 16, 3, 21, 68] DDA_R 0.74 DDA_S 0.91
+   xgb_bin: pred [1051, 38, 11, 5, 3, 0, 66] DDA_R 0.73 DDA_S 0.94
+BDQ levels [0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0] | observed [283, 403, 377, 78, 24, 6, 3, 1] | R 10 tbp+ 29
+   cnn_bin s42: pred [12, 1106, 4, 14, 10, 16, 13, 0] DDA_R 0.50 DDA_S 0.90 | tbp+: pred [0, 0, 0, 0, 0, 16, 13, 0] obs [3, 5, 8, 2, 5, 5, 0, 1]
+   cnn_bin s43: pred [15, 1088, 22, 17, 8, 9, 16, 0] DDA_R 0.50 DDA_S 0.90
+   cnn_bin s44: pred [1092, 2, 21, 22, 10, 13, 14, 1] DDA_R 0.60 DDA_S 0.59
+   cnn_std s42: pred [9, 1106, 18, 18, 17, 6, 1, 0] DDA_R 0.00 DDA_S 0.90 | tbp+: pred [0, 13, 0, 4, 9, 3, 0, 0] obs [3, 5, 8, 2, 5, 5, 0, 1]
+   cnn_std s43: pred [7, 20, 1103, 15, 22, 6, 1, 1] DDA_R 0.00 DDA_S 0.73
+   cnn_std s44: pred [2, 1101, 26, 19, 17, 9, 1, 0] DDA_R 0.00 DDA_S 0.90
+   xgb: pred [6, 1123, 21, 13, 9, 3, 0, 0] DDA_R 0.00 DDA_S 0.91
+   xgb_bin: pred [7, 1108, 21, 9, 1, 7, 22, 0] DDA_R 0.60 DDA_S 0.90
+CFZ levels [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0] | observed [732, 268, 119, 34, 13, 4, 2] | R 53 tbp+ 19
+   cnn_bin s42: pred [1146, 7, 0, 7, 1, 2, 9] DDA_R 0.02 DDA_S 0.89 | tbp+: pred [0, 0, 0, 7, 1, 2, 9] obs [6, 6, 2, 2, 2, 1, 0]
+   cnn_bin s43: pred [1124, 0, 29, 1, 8, 5, 5] DDA_R 0.09 DDA_S 0.87
+   cnn_bin s44: pred [1136, 17, 0, 9, 0, 0, 10] DDA_R 0.02 DDA_S 0.89
+   cnn_std s42: pred [1116, 2, 4, 8, 10, 10, 22] DDA_R 0.09 DDA_S 0.86 | tbp+: pred [5, 0, 1, 0, 7, 6, 0] obs [6, 6, 2, 2, 2, 1, 0]
+   cnn_std s43: pred [6, 0, 5, 9, 11, 11, 1130] DDA_R 0.17 DDA_S 0.01
+   cnn_std s44: pred [19, 1131, 1, 4, 0, 10, 7] DDA_R 0.08 DDA_S 0.98
+   xgb: pred [1138, 3, 7, 2, 2, 9, 11] DDA_R 0.08 DDA_S 0.88
+   xgb_bin: pred [1135, 5, 13, 0, 2, 4, 13] DDA_R 0.06 DDA_S 0.88
+DLM levels [0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0] | observed [921, 134, 63, 24, 5, 4, 9] | R 18 tbp+ 3
+   cnn_bin s42: pred [918, 155, 48, 36, 0, 2, 1] DDA_R 0.06 DDA_S 0.89 | tbp+: pred [0, 0, 0, 0, 0, 2, 1] obs [0, 1, 0, 1, 0, 0, 1]
+   cnn_bin s43: pred [1058, 21, 40, 38, 0, 2, 1] DDA_R 0.06 DDA_S 0.89
+   cnn_bin s44: pred [1065, 30, 31, 31, 0, 2, 1] DDA_R 0.06 DDA_S 0.89
+   cnn_std s42: pred [926, 132, 32, 5, 11, 51, 3] DDA_R 0.06 DDA_S 0.86 | tbp+: pred [2, 0, 0, 0, 1, 0, 0] obs [0, 1, 0, 1, 0, 0, 1]
+   cnn_std s43: pred [861, 5, 69, 36, 11, 135, 43] DDA_R 0.28 DDA_S 0.72
+   cnn_std s44: pred [31, 969, 12, 26, 15, 47, 60] DDA_R 0.17 DDA_S 0.85
+   xgb: pred [1064, 9, 16, 35, 28, 2, 6] DDA_R 0.06 DDA_S 0.87
+   xgb_bin: pred [1078, 14, 30, 35, 2, 1, 0] DDA_R 0.06 DDA_S 0.89
+EMB levels [0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0] | observed [16, 112, 397, 296, 149, 137, 76] | R 213 tbp+ 371
+   cnn_bin s42: pred [51, 11, 718, 29, 3, 320, 51] DDA_R 0.94 DDA_S 0.88 | tbp+: pred [0, 0, 0, 0, 0, 320, 51] obs [3, 8, 7, 32, 121, 126, 74]
+   cnn_bin s43: pred [31, 13, 725, 41, 2, 336, 35] DDA_R 0.94 DDA_S 0.88
+   cnn_bin s44: pred [35, 12, 742, 19, 4, 324, 47] DDA_R 0.94 DDA_S 0.88
+   cnn_std s42: pred [22, 14, 777, 53, 148, 137, 32] DDA_R 0.84 DDA_S 0.92 | tbp+: pred [9, 1, 12, 39, 143, 137, 30] obs [3, 8, 7, 32, 121, 126, 74]
+   cnn_std s43: pred [65, 21, 692, 65, 169, 121, 50] DDA_R 0.85 DDA_S 0.90
+   cnn_std s44: pred [41, 46, 720, 46, 187, 107, 36] DDA_R 0.81 DDA_S 0.90
+   xgb: pred [42, 16, 720, 58, 161, 143, 43] DDA_R 0.87 DDA_S 0.91
+   xgb_bin: pred [39, 14, 710, 43, 6, 316, 55] DDA_R 0.95 DDA_S 0.88
+ETH levels [0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0] | observed [26, 182, 439, 282, 91, 71, 89] | R 160 tbp+ 278
+   cnn_bin s42: pred [21, 34, 797, 22, 28, 163, 115] DDA_R 0.88 DDA_S 0.84 | tbp+: pred [0, 0, 0, 0, 0, 163, 115] obs [4, 6, 16, 50, 64, 57, 81]
+   cnn_bin s43: pred [47, 16, 786, 8, 45, 199, 79] DDA_R 0.89 DDA_S 0.84
+   cnn_bin s44: pred [54, 19, 767, 28, 34, 156, 122] DDA_R 0.88 DDA_S 0.83
+   cnn_std s42: pred [30, 53, 857, 20, 65, 59, 96] DDA_R 0.49 DDA_S 0.82 | tbp+: pred [9, 10, 89, 10, 45, 50, 65] obs [4, 6, 16, 50, 64, 57, 81]
+   cnn_std s43: pred [56, 12, 869, 39, 56, 59, 89] DDA_R 0.50 DDA_S 0.83
+   cnn_std s44: pred [60, 28, 863, 33, 68, 52, 76] DDA_R 0.49 DDA_S 0.83
+   xgb: pred [3, 50, 974, 31, 36, 42, 44] DDA_R 0.39 DDA_S 0.88
+   xgb_bin: pred [0, 39, 839, 16, 8, 216, 62] DDA_R 0.87 DDA_S 0.87
+INH levels [0.025, 0.05, 0.1, 0.2, 0.4, 0.8, 1.6, 3.2] | observed [243, 339, 27, 36, 31, 34, 138, 326] | R 565 tbp+ 549
+   cnn_bin s42: pred [142, 473, 10, 63, 28, 27, 313, 118] DDA_R 0.87 DDA_S 0.98 | tbp+: pred [0, 0, 0, 63, 28, 27, 313, 118] obs [3, 6, 6, 26, 30, 34, 128, 316]
+   cnn_bin s43: pred [346, 265, 14, 57, 27, 21, 325, 119] DDA_R 0.88 DDA_S 0.96
+   cnn_bin s44: pred [291, 323, 11, 68, 21, 23, 240, 197] DDA_R 0.86 DDA_S 0.97
+   cnn_std s42: pred [294, 323, 22, 38, 20, 75, 277, 125] DDA_R 0.83 DDA_S 0.96 | tbp+: pred [8, 7, 11, 36, 19, 70, 273, 125] obs [3, 6, 6, 26, 30, 34, 128, 316]
+   cnn_std s43: pred [295, 319, 23, 37, 24, 45, 238, 193] DDA_R 0.86 DDA_S 0.96
+   cnn_std s44: pred [300, 319, 18, 43, 28, 26, 208, 232] DDA_R 0.86 DDA_S 0.96
+   xgb: pred [136, 507, 6, 31, 28, 12, 211, 243] DDA_R 0.85 DDA_S 0.98
+   xgb_bin: pred [135, 484, 6, 50, 31, 12, 207, 249] DDA_R 0.87 DDA_S 0.98
+KAN levels [1.0, 2.0, 4.0, 8.0, 16.0, 32.0] | observed [345, 565, 164, 25, 10, 71] | R 106 tbp+ 114
+   cnn_bin s42: pred [123, 904, 39, 34, 8, 72] DDA_R 0.78 DDA_S 0.97 | tbp+: pred [0, 0, 0, 34, 8, 72] obs [5, 12, 10, 12, 8, 67]
+   cnn_bin s43: pred [85, 940, 41, 22, 22, 70] DDA_R 0.79 DDA_S 0.97
+   cnn_bin s44: pred [65, 959, 42, 31, 11, 72] DDA_R 0.79 DDA_S 0.97
+   cnn_std s42: pred [113, 912, 4, 66, 12, 73] DDA_R 0.80 DDA_S 0.95 | tbp+: pred [0, 11, 0, 22, 9, 72] obs [5, 12, 10, 12, 8, 67]
+   cnn_std s43: pred [88, 903, 6, 79, 32, 72] DDA_R 0.80 DDA_S 0.92
+   cnn_std s44: pred [88, 919, 3, 66, 32, 72] DDA_R 0.79 DDA_S 0.93
+   xgb: pred [111, 923, 37, 17, 19, 73] DDA_R 0.79 DDA_S 0.97
+   xgb_bin: pred [110, 919, 37, 22, 22, 70] DDA_R 0.80 DDA_S 0.97
+LEV levels [0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0] | observed [43, 306, 557, 79, 40, 65, 65, 28] | R 198 tbp+ 206
+   cnn_bin s42: pred [1, 8, 955, 13, 9, 95, 102, 0] DDA_R 0.85 DDA_S 0.93 | tbp+: pred [0, 0, 0, 0, 9, 95, 102, 0] obs [3, 12, 3, 7, 29, 62, 62, 28]
+   cnn_bin s43: pred [0, 0, 977, 0, 195, 0, 11, 0] DDA_R 0.51 DDA_S 0.94
+   cnn_bin s44: pred [0, 0, 976, 1, 9, 108, 89, 0] DDA_R 0.83 DDA_S 0.93
+   cnn_std s42: pred [13, 734, 156, 97, 58, 14, 94, 17] DDA_R 0.73 DDA_S 0.90 | tbp+: pred [1, 18, 1, 5, 56, 14, 94, 17] obs [3, 12, 3, 7, 29, 62, 62, 28]
+   cnn_std s43: pred [702, 49, 129, 123, 33, 45, 85, 17] DDA_R 0.73 DDA_S 0.53
+   cnn_std s44: pred [15, 691, 142, 152, 29, 42, 94, 18] DDA_R 0.77 DDA_S 0.88
+   xgb: pred [8, 744, 118, 133, 55, 12, 97, 16] DDA_R 0.75 DDA_S 0.91
+   xgb_bin: pred [8, 719, 124, 126, 78, 15, 97, 16] DDA_R 0.80 DDA_S 0.91
+LZD levels [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0] | observed [30, 83, 318, 580, 159, 8, 8] | R 16 tbp+ 13
+   cnn_bin s42: pred [29, 7, 1021, 18, 96, 4, 11] DDA_R 0.69 DDA_S 0.83 | tbp+: pred [0, 0, 0, 0, 0, 2, 11] obs [1, 0, 0, 1, 1, 5, 5]
+   cnn_bin s43: pred [54, 9, 1019, 21, 69, 4, 10] DDA_R 0.62 DDA_S 0.81
+   cnn_bin s44: pred [24, 10, 8, 1027, 101, 6, 10] DDA_R 0.69 DDA_S 0.86
+   cnn_std s42: pred [27, 6, 1021, 44, 23, 50, 15] DDA_R 0.56 DDA_S 0.81 | tbp+: pred [0, 0, 1, 1, 0, 0, 11] obs [1, 0, 0, 1, 1, 5, 5]
+   cnn_std s43: pred [15, 1027, 12, 12, 1, 98, 21] DDA_R 0.62 DDA_S 0.37
+   cnn_std s44: pred [28, 11, 1026, 38, 11, 60, 12] DDA_R 0.62 DDA_S 0.81
+   xgb: pred [19, 9, 6, 1051, 46, 44, 11] DDA_R 0.56 DDA_S 0.86
+   xgb_bin: pred [19, 9, 5, 1051, 89, 2, 11] DDA_R 0.69 DDA_S 0.87
+MXF levels [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0] | observed [95, 214, 398, 264, 56, 47, 58, 54] | R 159 tbp+ 199
+   cnn_bin s42: pred [67, 681, 98, 137, 4, 73, 6, 120] DDA_R 0.77 DDA_S 0.70 | tbp+: pred [0, 0, 0, 0, 0, 73, 6, 120] obs [4, 4, 7, 15, 21, 42, 54, 52]
+   cnn_bin s43: pred [738, 0, 177, 66, 6, 65, 105, 29] DDA_R 0.88 DDA_S 0.48
+   cnn_bin s44: pred [0, 732, 93, 162, 0, 5, 194, 0] DDA_R 0.93 DDA_S 0.72
+   cnn_std s42: pred [676, 67, 172, 78, 25, 61, 9, 98] DDA_R 0.73 DDA_S 0.51 | tbp+: pred [7, 3, 1, 1, 20, 61, 8, 98] obs [4, 4, 7, 15, 21, 42, 54, 52]
+   cnn_std s43: pred [723, 35, 115, 125, 17, 59, 23, 89] DDA_R 0.74 DDA_S 0.49
+   cnn_std s44: pred [66, 688, 115, 126, 10, 69, 81, 31] DDA_R 0.84 DDA_S 0.72
+   xgb: pred [56, 16, 818, 107, 9, 69, 11, 100] DDA_R 0.75 DDA_S 0.83
+   xgb_bin: pred [54, 16, 808, 106, 3, 73, 25, 101] DDA_R 0.81 DDA_S 0.82
+RIF levels [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0] | observed [433, 209, 72, 18, 11, 15, 16, 403] | R 445 tbp+ 470
+   cnn_bin s42: pred [281, 191, 217, 18, 34, 32, 60, 344] DDA_R 0.87 DDA_S 0.72 | tbp+: pred [0, 0, 0, 0, 34, 32, 60, 344] obs [11, 7, 8, 11, 11, 14, 16, 392]
+   cnn_bin s43: pred [273, 202, 215, 17, 33, 33, 65, 339] DDA_R 0.87 DDA_S 0.73
+   cnn_bin s44: pred [280, 192, 218, 17, 36, 46, 62, 326] DDA_R 0.84 DDA_S 0.73
+   cnn_std s42: pred [496, 207, 10, 31, 32, 16, 24, 361] DDA_R 0.84 DDA_S 0.88 | tbp+: pred [12, 2, 1, 30, 25, 16, 24, 360] obs [11, 7, 8, 11, 11, 14, 16, 392]
+   cnn_std s43: pred [267, 194, 226, 49, 31, 31, 66, 313] DDA_R 0.84 DDA_S 0.72
+   cnn_std s44: pred [281, 73, 342, 44, 42, 16, 53, 326] DDA_R 0.83 DDA_S 0.66
+   xgb: pred [581, 124, 15, 19, 21, 22, 20, 375] DDA_R 0.87 DDA_S 0.87
+   xgb_bin: pred [572, 121, 13, 1, 39, 25, 28, 378] DDA_R 0.88 DDA_S 0.87
+
+== RIF attribution
+          feature  carriers_test  ablation    IGdir   IGabs  SHAP_mean  SHAP_abs
+ rpoB p.Ser450Leu            285     0.568    0.529   0.539     0.0596     0.067
+   rpoC c.-339T>C            598    -0.056  -0.0229   0.198     0.0157    0.0359
+ rpoB p.Asp435Val             61     0.111    0.104   0.105     0.0102     0.011
+rpoC p.Glu1092Asp             40    0.0748   0.0677  0.0677    0.00611    0.0126
+ rpoC p.Gly594Glu            173    0.0768   0.0547  0.0585    0.00727    0.0132
+ rpoB p.His445Asp             14    0.0284   0.0298  0.0304    0.00444   0.00634
+ rpoB p.His445Tyr             11    0.0255   0.0251  0.0251    0.00394   0.00636
+ rpoC p.Val483Ala             25   0.00514   0.0237  0.0237    0.00315   0.00398
+   rpoC c.-936T>G            103    0.0275  0.00491  0.0235    0.00525   0.00827
+ rpoB p.Val695Leu             16    0.0182   0.0208  0.0208    0.00138   0.00409
+ rpoC p.Ala172Val             74 -0.000504 0.000674  0.0182    0.00587   0.00839
+ rpoC p.Pro601Leu             52    0.0277   0.0152  0.0175    0.00472    0.0073
+ rpoC p.Val483Gly             18   0.00449   0.0161  0.0161    0.00301   0.00335
+ rpoB p.Leu452Pro             10    0.0175   0.0104  0.0148    0.00304   0.00403
+ rpoB p.Ser450Trp              7    0.0189   0.0148  0.0148     0.0021   0.00334
+    rpoA c.-68C>T             22   0.00436 0.000575  0.0128    0.00104   0.00431
+ rpoB p.Asp435Tyr             13    0.0194   0.0126  0.0128    0.00353   0.00436
+ rpoB p.Ala692Thr              8   0.00998   0.0119  0.0119   0.000707   0.00251
+    rpoB c.-61C>T            100    0.0104   0.0068  0.0102    0.00162    0.0036
+ rpoB p.Glu250Gly              6    0.0114  0.00967 0.00967    0.00117   0.00225
+                    feature  carriers_test  ablation    IGdir   IGabs  SHAP_mean  SHAP_abs
+TB-Profiler resistance call            470       NaN      NaN     NaN      0.134     0.134
+           rpoB p.Ser450Leu            285     0.568    0.529   0.539     0.0596     0.067
+             rpoC c.-339T>C            598    -0.056  -0.0229   0.198     0.0157    0.0359
+           rpoC p.Gly594Glu            173    0.0768   0.0547  0.0585    0.00727    0.0132
+          rpoC p.Glu1092Asp             40    0.0748   0.0677  0.0677    0.00611    0.0126
+           rpoB p.Asp435Val             61     0.111    0.104   0.105     0.0102     0.011
+           rpoC p.Ala172Val             74 -0.000504 0.000674  0.0182    0.00587   0.00839
+             rpoC c.-936T>G            103    0.0275  0.00491  0.0235    0.00525   0.00827
+           rpoC p.Pro601Leu             52    0.0277   0.0152  0.0175    0.00472    0.0073
+           rpoB p.His445Tyr             11    0.0255   0.0251  0.0251    0.00394   0.00636
+           rpoB p.His445Asp             14    0.0284   0.0298  0.0304    0.00444   0.00634
+           rpoB p.Asp435Tyr             13    0.0194   0.0126  0.0128    0.00353   0.00436
+              rpoA c.-68C>T             22   0.00436 0.000575  0.0128    0.00104   0.00431
+           rpoB p.Val695Leu             16    0.0182   0.0208  0.0208    0.00138   0.00409
+           rpoB p.Leu452Pro             10    0.0175   0.0104  0.0148    0.00304   0.00403
+           rpoC p.Val483Ala             25   0.00514   0.0237  0.0237    0.00315   0.00398
+              rpoB c.-61C>T            100    0.0104   0.0068  0.0102    0.00162    0.0036
+           rpoB p.Ile491Phe              6   0.00851  0.00812 0.00812    0.00334   0.00353
+           rpoC p.Val483Gly             18   0.00449   0.0161  0.0161    0.00301   0.00335
+           rpoB p.Ser450Trp              7    0.0189   0.0148  0.0148     0.0021   0.00334
+           rpoB p.Leu430Pro              7    0.0116  0.00568 0.00568    0.00267   0.00334
+       feature  carriers_test  ablation     IGdir    IGabs  SHAP_mean  SHAP_abs
+ rpoB c.-61C>T            100  0.010432  0.006803 0.010156   0.001625  0.003604
+rpoC c.-936T>G            103  0.027476  0.004914 0.023531   0.005247  0.008267
+rpoC c.-339T>C            598 -0.055981 -0.022941 0.197883   0.015695  0.035871
+          feature  carriers  pct_R  pct_with_S450L top_lineage  pct_carriers_in_top  pct_of_top_lineage_carrying                                                                                    by_lineage
+ rpoB p.Ser450Leu      2912   96.4           100.0    lineage2                 52.6                         37.2                      lineage2:1533; lineage4:1022; lineage3:272; lineage1:66; mixed:16; nan:3
+   rpoC c.-339T>C      5870   45.1            32.0    lineage2                 70.2                         99.9 lineage2:4122; lineage3:1009; lineage1:638; mixed:76; La1:13; lineage6:6; nan:3; La3:2; La2:1
+ rpoB p.Asp435Val       535   95.0             0.0    lineage4                 55.7                          5.2                           lineage4:298; lineage2:193; lineage3:39; lineage1:3; mixed:1; nan:1
+rpoC p.Glu1092Asp       330   63.9            59.4    lineage2                 99.4                          8.0                                                                         lineage2:328; mixed:2
+ rpoC p.Gly594Glu      1784   21.4            12.8    lineage4                 98.7                         30.6                                                               lineage4:1760; mixed:13; nan:11
+ rpoB p.His445Asp       124   96.8             0.0    lineage4                 56.5                          1.2                                    lineage4:70; lineage2:34; lineage3:16; lineage1:3; mixed:1
+ rpoB p.His445Tyr       153   97.4             0.0    lineage4                 43.8                          1.2                                             lineage4:67; lineage2:67; lineage3:10; lineage1:9
+ rpoC p.Val483Ala       217   96.8            98.2    lineage2                 70.5                          3.7                                   lineage2:153; lineage4:39; lineage3:21; mixed:3; lineage1:1
+   rpoC c.-936T>G      1022   46.5            26.8    lineage3                 98.7                        100.0                                                                       lineage3:1009; mixed:13
+ rpoB p.Val695Leu       105   40.0            29.5    lineage4                100.0                          1.8                                                                                  lineage4:105
+ rpoC p.Ala172Val       651   18.4            10.3    lineage1                 98.0                        100.0                                                     lineage1:638; mixed:11; nan:1; lineage2:1
+ rpoC p.Pro601Leu       445   13.0             5.8    lineage1                 98.2                         68.5                                                                         lineage1:437; mixed:8
+ rpoC p.Val483Gly       206   98.5            97.1    lineage2                 54.4                          2.7                                   lineage2:112; lineage4:54; lineage3:34; lineage1:5; mixed:1
+ rpoB p.Leu452Pro       130   63.8             0.0    lineage4                 48.5                          1.1                                    lineage4:63; lineage2:45; lineage3:16; lineage1:4; mixed:2
+ rpoB p.Ser450Trp        59   94.9             0.0    lineage4                 42.4                          0.4                                             lineage4:25; lineage2:16; lineage3:12; lineage1:6
+ rpoB p.Asp435Tyr       138   81.9             0.7    lineage4                 43.5                          1.0                                             lineage4:60; lineage2:41; lineage3:36; lineage1:1
+    rpoA c.-68C>T       268   13.8             7.8    lineage4                 98.9                          4.6                                                                         lineage4:265; mixed:3
+    rpoB c.-61C>T       981   47.2            27.2    lineage3                 99.1                         96.3                                                                  lineage3:972; mixed:8; nan:1
+ rpoB p.Ile491Phe        57   68.4             0.0    lineage4                 77.2                          0.8                                               lineage4:44; lineage2:6; lineage1:4; lineage3:3
+ rpoB p.Leu430Pro       124   37.1             0.0    lineage2                 50.8                          1.5                                   lineage2:63; lineage4:34; lineage3:16; lineage1:10; mixed:1
+    rpoB c.-61C>T       981   47.2            27.2    lineage3                 99.1                         96.3                                                                  lineage3:972; mixed:8; nan:1
+
+== constant prediction of the most frequent category, most frequent genotype
+drug  ecoff  ecoff_class    n  modal_mic  modal_dda  top_genotype_pct  top_genotype_n_variants  wildtype_pct              cnn_std_top_pred cnn_std_largest_pred_pct               cnn_bin_top_pred cnn_bin_largest_pred_pct
+ AMI   1.00        1.000 1174      0.250      0.879            72.658                        1         0.000             [0.25, 0.5, 0.25]             [76, 74, 75]              [0.25, 0.5, 0.25]             [77, 81, 79]
+ BDQ   0.25        0.250 1175      0.031      0.905            93.447                        0        93.447    [0.03125, 0.0625, 0.03125]             [94, 94, 94]   [0.03125, 0.03125, 0.015625]             [94, 93, 93]
+ CFZ   0.25        0.250 1172      0.062      0.853            94.795                        0        94.795          [0.0625, 4.0, 0.125]             [95, 96, 97]       [0.0625, 0.0625, 0.0625]             [98, 96, 97]
+ DLM   0.12        0.125 1160      0.016      0.909            69.741                        0        69.741 [0.015625, 0.015625, 0.03125]             [80, 74, 84] [0.015625, 0.015625, 0.015625]             [79, 91, 92]
+ EMB   4.00        4.000 1183      1.000      0.680            34.996                        1         0.507               [1.0, 1.0, 1.0]             [66, 58, 61]                [1.0, 1.0, 1.0]             [61, 61, 63]
+ ETH   4.00        4.000 1180      1.000      0.765            72.119                        0        72.119               [1.0, 1.0, 1.0]             [73, 74, 73]                [1.0, 1.0, 1.0]             [68, 67, 65]
+ INH   0.10        0.100 1174      0.050      0.519            19.080                        0        19.080            [0.05, 0.05, 0.05]             [28, 27, 27]             [0.05, 0.05, 0.05]             [40, 29, 28]
+ KAN   4.00        4.000 1180      2.000      0.910            75.000                        1         0.000               [2.0, 2.0, 2.0]             [77, 77, 78]                [2.0, 2.0, 2.0]             [77, 80, 81]
+ LEV   1.00        1.000 1183      0.500      0.796            53.508                        3         0.000           [0.25, 0.125, 0.25]             [62, 59, 58]                [0.5, 0.5, 0.5]             [81, 83, 83]
+ LZD   1.00        1.000 1186      0.500      0.891            85.497                        0        85.497           [0.25, 0.125, 0.25]             [86, 87, 87]              [0.25, 0.25, 0.5]             [86, 86, 87]
+ MXF   1.00        1.000 1186      0.250      0.739            54.890                        3         0.000       [0.0625, 0.0625, 0.125]             [57, 61, 58]         [0.125, 0.0625, 0.125]             [57, 62, 62]
+ RIF   0.50        0.500 1177      0.062      0.545            17.247                        0        17.247          [0.0625, 0.25, 0.25]             [42, 27, 29]             [0.25, 0.25, 0.25]             [29, 29, 28]
+
+== TB-Profiler-positive / negative test isolates predicted above the ECOFF
+drug  ecoff  ecoff_class  tbp_pos  tbp_pos_obs_above tbp_pos_pred_above_cnn_bin tbp_neg_pred_above_cnn_bin  tbp_pos_pred_above_xgb_bin  tbp_neg_pred_above_xgb_bin  tbp_pos_pred_above_cnn_std  n_obs_at_ecoff_tbp_pos  n_obs_at_ecoff
+ AMI   1.00        1.000       74                 62               [74, 74, 74]                  [1, 0, 0]                          74                           0                          71                       4              58
+ BDQ   0.25        0.250       29                  6               [29, 25, 27]                  [0, 0, 1]                          29                           0                           3                       5              24
+ CFZ   0.25        0.250       19                  5               [19, 19, 19]                  [0, 0, 0]                          19                           0                          13                       2             119
+ DLM   0.12        0.125        3                  1                  [3, 3, 3]                  [0, 0, 0]                           3                           0                           1                       1              24
+ EMB   4.00        4.000      371                200            [371, 371, 371]                  [0, 0, 0]                         371                           0                         167                     121             149
+ ETH   4.00        4.000      278                138            [278, 278, 278]                  [0, 0, 0]                         278                           0                         115                      64              91
+ INH   0.10        0.100      549                534            [549, 549, 549]                  [0, 0, 0]                         549                           0                         523                       6              27
+ KAN   4.00        4.000      114                 87            [114, 114, 114]                  [0, 0, 0]                         114                           0                         103                      10             164
+ LEV   1.00        1.000      206                181            [206, 206, 206]                  [0, 0, 0]                         206                           0                         181                       7              79
+ LZD   1.00        1.000       13                 10               [13, 12, 13]                  [2, 2, 3]                          13                           0                          11                       1             159
+ MXF   1.00        1.000      199                148            [199, 199, 199]                  [0, 0, 0]                         199                           0                         167                      21              56
+ RIF   0.50        0.500      470                433            [470, 470, 470]                  [0, 0, 0]                         470                           0                         425                      11              18
+xgb DDA minus constant prediction: min -0.050 max +0.401 | higher in ['AMI', 'EMB', 'ETH', 'INH', 'KAN', 'LEV', 'MXF', 'RIF'] | lower in ['CFZ', 'DLM', 'LZD']
+xgb_bin DDA minus constant prediction: min -0.029 max +0.408 | higher in ['AMI', 'EMB', 'ETH', 'INH', 'KAN', 'LEV', 'MXF', 'RIF'] | lower in ['BDQ', 'CFZ', 'DLM', 'LZD']
+cnn_std DDA minus constant prediction: min -0.260 max +0.387 | higher in ['EMB', 'ETH', 'INH', 'KAN', 'RIF'] | lower in ['AMI', 'BDQ', 'CFZ', 'DLM', 'LEV', 'LZD', 'MXF']
+cnn_bin DDA minus constant prediction: min -0.108 max +0.404 | higher in ['AMI', 'EMB', 'ETH', 'INH', 'KAN', 'LEV', 'RIF'] | lower in ['BDQ', 'CFZ', 'DLM', 'LZD', 'MXF']
+constant-prediction DDA: mean 0.78 range 0.52-0.91
+
+== Table 2 comparisons
+XGB >= standard CNN (2 dp): ['AMI', 'BDQ', 'CFZ', 'DLM', 'EMB', 'ETH', 'INH', 'KAN', 'LEV', 'LZD', 'MXF', 'RIF']
+bin CNN > std CNN (2 dp): ['AMI', 'CFZ', 'DLM', 'ETH', 'INH', 'KAN', 'LEV', 'LZD', 'MXF'] | equal: ['EMB', 'RIF']
+bin CNN - XGB: {'AMI': 0.002, 'BDQ': -0.107, 'CFZ': 0.003, 'DLM': 0.018, 'EMB': -0.012, 'ETH': 0.025, 'INH': 0.003, 'KAN': -0.002, 'LEV': 0.019, 'LZD': -0.023, 'MXF': -0.151, 'RIF': -0.091}
+XGB bin - XGB: {'AMI': 0.026, 'BDQ': -0.007, 'CFZ': 0.002, 'DLM': 0.021, 'EMB': -0.012, 'ETH': 0.055, 'INH': 0.007, 'KAN': 0.002, 'LEV': 0.009, 'LZD': 0.016, 'MXF': 0.003, 'RIF': 0.003}
+bin SD <= 0.03: ['AMI', 'CFZ', 'DLM', 'EMB', 'ETH', 'INH', 'KAN', 'LEV', 'LZD', 'RIF'] | std SD <= 0.03: ['AMI', 'EMB', 'ETH', 'INH', 'KAN']
+AUC range across the four models per drug: {'AMI': (0.58, 0.63), 'BDQ': (0.45, 0.62), 'CFZ': (0.54, 0.55), 'DLM': (0.52, 0.56), 'EMB': (0.68, 0.78), 'ETH': (0.61, 0.65), 'INH': (0.83, 0.84), 'KAN': (0.71, 0.72), 'LEV': (0.75, 0.78), 'LZD': (0.56, 0.61), 'MXF': (0.72, 0.74), 'RIF': (0.79, 0.81)}
+max |AUC std CNN - XGB|: [0.009, 0.076, 0.016, 0.01, 0.001, 0.023, 0.006, 0.009, 0.013, 0.021, 0.008, 0.002]
+AUC bin CNN - std CNN: {'AMI': -0.046, 'BDQ': 0.092, 'CFZ': -0.006, 'DLM': 0.009, 'EMB': -0.098, 'ETH': 0.01, 'INH': -0.009, 'KAN': 0.006, 'LEV': -0.011, 'LZD': 0.021, 'MXF': -0.016, 'RIF': -0.003}
+
+== oversampling (XGBoost)
+dda: random > none in 1, < in 11, = in 0 drugs | AMI -0.028, BDQ -0.001, CFZ -0.014, DLM -0.049, EMB -0.018, ETH -0.012, INH +0.010, KAN -0.013, LEV -0.030, LZD -0.043, MXF -0.013, RIF -0.008
+auc_ovr: random > none in 4, < in 8, = in 0 drugs | AMI +0.012, BDQ -0.068, CFZ -0.003, DLM -0.013, EMB +0.005, ETH +0.003, INH +0.003, KAN -0.011, LEV -0.018, LZD -0.029, MXF -0.010, RIF -0.029
+bal_acc: random > none in 10, < in 2, = in 0 drugs | AMI -0.005, BDQ +0.003, CFZ +0.048, DLM +0.029, EMB +0.026, ETH -0.006, INH +0.057, KAN +0.064, LEV +0.047, LZD +0.024, MXF +0.016, RIF +0.034
+macro_f1: random > none in 10, < in 2, = in 0 drugs | AMI -0.003, BDQ +0.003, CFZ +0.047, DLM +0.036, EMB +0.035, ETH -0.006, INH +0.074, KAN +0.035, LEV +0.026, LZD +0.033, MXF +0.036, RIF +0.028
+R_recall: random > none in 9, < in 0, = in 3 drugs | AMI +0.012, BDQ +0.000, CFZ +0.075, DLM +0.056, EMB +0.033, ETH +0.038, INH +0.002, KAN +0.104, LEV +0.000, LZD +0.062, MXF +0.006, RIF +0.000
+R_recall none == 0: ['BDQ', 'CFZ', 'DLM']
+
+== S10 ranges by model
+                                   bal_acc       macro_f1       R_recall       R_precision      
+                                       min   max      min   max      min   max         min   max
+model                                                                                           
+Binary-supported CNN                  0.15  0.44     0.12  0.41     0.06  0.97        0.22  0.97
+Binary-supported XGBoost              0.13  0.47     0.07  0.42     0.06  0.97        0.21  0.97
+CNN                                   0.14  0.46     0.08  0.39     0.00  0.92        0.00  0.97
+Most frequent category (reference)    0.12  0.17     0.06  0.13     0.00  0.00        0.00  0.00
+XGBoost                               0.14  0.47     0.09  0.43     0.00  0.92        0.00  0.98
+drug    n  n_R  tbp_pos  sens  spec  n_disc  cnn_bin_conc  cnn_bin_disc  cnn_std_conc  cnn_std_disc  xgb_bin_conc  xgb_bin_disc
+ AMI 1174   84       74  0.74  0.99      34          0.93          0.05          0.85          0.14          0.95          0.06
+ BDQ 1175   10       29  0.60  0.98      27          0.81          0.11          0.85          0.38          0.92          0.04
+ CFZ 1172   53       19  0.09  0.99      62          0.89          0.02          0.62          0.14          0.89          0.00
+ DLM 1160   18        3  0.06  1.00      19          0.89          0.00          0.81          0.18          0.89          0.05
+ EMB 1183  213      371  0.94  0.82     184          0.94          0.64          0.91          0.80          0.94          0.64
+ ETH 1180  160      278  0.86  0.86     162          0.92          0.33          0.84          0.42          0.95          0.37
+ INH 1174  565      549  0.95  0.98      46          0.96          0.10          0.93          0.21          0.96          0.07
+ KAN 1180  106      114  0.82  0.97      46          0.98          0.22          0.95          0.38          0.99          0.24
+ LEV 1183  198      206  0.91  0.97      42          0.93          0.07          0.79          0.21          0.91          0.29
+ LZD 1186   16       13  0.62  1.00       9          0.83          0.22          0.67          0.15          0.88          0.11
+ MXF 1186  159      199  0.93  0.95      62          0.69          0.12          0.61          0.27          0.85          0.18
+ RIF 1177  445      470  0.97  0.95      49          0.81          0.05          0.81          0.25          0.91          0.06
+

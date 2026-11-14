@@ -67,6 +67,9 @@ for drug in DRUGS:
         else:
             e = extra(y, o[k].argmax(1), R, rc)
         s10.append(dict(drug=drug, model=lab, n=len(y), n_R=int(R.sum()), **e))
+    # reference: the most frequent MIC category of the test set predicted for every isolate
+    s10.append(dict(drug=drug, model="Most frequent category (reference)", n=len(y), n_R=int(R.sum()),
+                    **extra(y, np.full_like(y, np.bincount(y).argmax()), R, rc)))
     # TB-Profiler concordance
     conc = tbp == R
     r = dict(drug=drug, n=len(y), n_R=int(R.sum()), tbp_pos=int(tbp.sum()), sens=((tbp == 1) & (R == 1)).sum() / max(R.sum(), 1),
